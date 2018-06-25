@@ -105,87 +105,146 @@ textarea {
    }
 
    #introduction, #newsletter {
-       height: 350px;
-       padding-top: 25px;
+       height: 20%;
+       padding: 15px 0;
 
    }
 
-   #footer {
-      height: 95px;
+   h1 {
+     margin: 0;
    }
 
    p {
-       line-height: 25px;
+       line-height: 28px;
        padding: 0 30px;
      }
 
+     a {
+       text-decoration: none;
+     }
+
+     /***** GRID *****/
+
+     .full-width {
+       width: 100%;
+       margin: 0 auto;
+     }
+
+     .half-width {
+       float: left;
+       width: 50%;
+     }
+
+     .one-third-width {
+       width: auto;
+       float: right;
+       padding-right: 20px;
+     }
+
+     /*** When nav is visible, change float to left:
+     .one-third-width {
+       width: auto;
+       float: left;
+     }
+     ***/
+
+     .two-third-width {
+       width: auto;
+       float:right;
+     }
+
+
    /***** HEADER *****/
 
-   .gradient {
+   header {
       background:
-        linear-gradient(to bottom right,
-        rgba(0,176,229,.85),
-        rgba(0,176,229,.88)
+        linear-gradient(to right,
+        rgba(215,65,167,.88),
+        rgba(230,250,48,.88)
         ),
         url("../img/hero.jpg");
-      background-size: cover;
-      height: 400px;
+      background-size: auto;
+      margin: 0 auto;
 }
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul li{
+    float: right;
+}
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3a1772;
+}
+
+header h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a1772;
+}
+
+header h3 a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a1772;
+
+}
+
+.language {
+  color: #3d3d3d;
+  font-size: 12;
+  font-weight: 600;
+  float: left;
+  padding-left: 20px;
+}
+
+  .logo {
+  font-family: "Monoton", sans-serif;
+   color: #3a1772;
+   font-size: 25px;
+   font-weight: lighter;
+   padding-left: 20px;
+   }
+
 
    header img {
-     width: 65%;
-     margin: 0 auto;
-     display: block;
-     padding-top: 45px;
-   }
-
-   nav {
-       float: right;
-       padding: 75px 25px;
-   }
-   nav ul li{
-       display: inline-block;
-   }
-   nav ul li a {
-       text-transform: uppercase;
-       text-decoration: none;
-       font-size: 18px;
-       color: #ffffff;
-       padding-left: 80px;
-   }
-
-.nav-bar {
-    background: #ffffff;
-    height: 70px;
-    box-shadow: 0px 1px 2px 0px #b9b9b9;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
+    width: 55%;
+    margin: 0 auto;
+    display: block;
     clear: both;
-}
-
-   header h1 {
-      font-family: "Monoton", sans-serif;
-      color: #3d3d3d;
-      font-size: 30px;
-   }
-
-   /***** GRID *****/
-
-   .full-width {
-     width: 100%;
-     margin: 0 auto;
-   }
-
-   .half-width {
-       width: 50%;
-       float: left;
+    padding-bottom: 20px;
    }
 
    /***** INTRODUCTION *****/
 
 #introduction h2 {
     text-align: center;
-    color: #3d3d3d;
+    color: #d741a7;
     font-size: 26px;
     line-height: 30px;
 }
@@ -193,14 +252,14 @@ textarea {
 /***** newsletter *****/
 
 #newsletter {
-  background: #3d3d3d;
-  padding: 25px 30px;
+  background: #d741a7;
+  padding: 20px 0 25px 0;
 }
 
 #newsletter h2 {
   font-family: "Monoton", sans-serif;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: lighter;
   word-spacing: 10px;
 }
@@ -216,33 +275,38 @@ textarea {
 #newsletter .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  border-radius: 0px;
+  border-radius: 5px;
   border: 0px;
-  color: #3d3d3d;
+  color: #3a1772;
   font-family: 'Mukta+Vaani', sans-serif;
   font-size: 16px;
   background: #e6fa30;
   padding: 15px 40px 15px 40px;
   text-decoration: none;
   text-transform: uppercase;
-  margin-top: 25px;
+  margin: 50px 0;
 }
 
 #newsletter .btn:hover {
-  background: #bdce26;
+  background: #e8f46d;
   text-decoration: none;
+}
+
+#btn-padding {
+  padding: 8px 0;
 }
 
 /***** footer *****/
 
 footer {
-  background: #00b0e5;
-  height: 150px;
-  padding: 20px 0 25px 0;
+    background: #3d3d3d;
+    height: 150px;
+    padding: 20px 0 25px 0;
 }
 
 #contact p {
     color: #ffffff;
+    text-align: left;
 }
 
 #contact span {
@@ -251,12 +315,24 @@ footer {
 
 #contact a {
     text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
+    color: #e6fa30;
 }
 
 #right-pad {
-    padding-right: 25px;
+    padding-right: 8px;
+}
+
+p #imprint {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #999;
+}
+
+#social-media {
+  float: right;
+  width: auto;
+  margin: 0 auto;
+  padding: 15px 0;
 }
 
 
@@ -351,79 +427,161 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen
-     and (min-device-width: 768px)
-     and (max-device-width: 1024px)
-     and (-webkit-min-device-pixel-ratio: 1) {
+   /*
+     ##Device = Desktops
+     ##Screen = 1281px to higher resolution desktops
+   */
 
-       header img {
-         width: 35%;
-         margin: 0 auto;
-         display: block;
-         padding-top: 45px;
-       }
+   @media (min-width: 1281px) {
+
+     header img {
+       width: 20%;
+     }
+     #introduction, #newsletter {
+       padding-left: 100px;
+       padding-right: 100px;
+     }
+   }
+
+   /*
+     ##Device = Laptops, Desktops
+     ##Screen = B/w 1025px to 1280px
+   */
+
+   @media (min-width: 1025px) and (max-width: 1280px) {
+
+     header img {
+       width: 20%;
+     }
+     #introduction, #newsletter {
+       padding-left: 50px;
+       padding-right: 50px;
+     }
 
    }
 
-   @media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 1) {
+   /*
+     ##Device = Tablets, Ipads (portrait)
+     ##Screen = B/w 768px to 1024px
+   */
 
-    header img {
-      width: 26%;
-      margin: 0 auto;
-      display: block;
-      padding-top: 45px;
+   @media (min-width: 768px) and (max-width: 1024px) {
+
+     header img {
+       width: 27%;
+     }
+     #introduction, #newsletter {
+       padding: 20px 50px;
+     }
+
+   }
+
+@media (min-width: 300px) and (max-width: 1024px) {
+
+#header {
+  z-index: 1;
+}
+  .one-third-width {
+    float: right;
+    padding-right: 20px;
+  }
+
+/*unhide when nav needs to appear
+#header {
+  z-index: 1;
+  position: fixed;
+}
+  .one-third-width {
+    float: left;
+  }
+  */
+
+
+  .two-third-width {
+    display: block;
+    float: none;
+    height: 40px;
+    width: 100%;
+    background: url(../img/burger-icon.png) no-repeat 98% center;
+   }
+
+     nav {
+       width: 100%;
+       float: center;
+     }
+     nav ul {
+         overflow: hidden;
+         background: #d741a7;
+         height: 0;
+     }
+
+     nav ul.open {
+       height: auto;
+     }
+
+     nav ul li {
+         float: none;
+         text-align: left;
+         width: 100%;
+         margin: 0;
+     }
+   nav ul li a {
+        color: #ffffff;
+        padding: 10px;
+        display: block;
+        margin: 0;
     }
 
+    .logo {
+     padding-left: 0;
+     }
+   }
 
 
-}
+   /*
+     ##Device = Tablets, Ipads (landscape)
+     ##Screen = B/w 768px to 1024px
+   */
 
-   @media screen
-     and (min-device-width: 1200px)
-     and (max-device-width: 1600px)
-     and (-webkit-min-device-pixel-ratio: 2)
-     and (min-resolution: 192dpi) {
-    /* Style adjustments for viewports that meet the condition */
+   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-    .gradient {
+     header img {
+       width: 27%;
+     }
+     #introduction, #newsletter {
+       padding-left: 50px;
+       padding-right: 50px;
+     }
+
+   }
+
+   /*
+     ##Device = Low Resolution Tablets, Mobiles (Landscape)
+     ##Screen = B/w 481px to 767px
+   */
+
+   @media (min-width: 481px) and (max-width: 767px) {
+
+    header img {
+      width: 30%;
+    }
+
+    header {
+       background:
+        linear-gradient(to right,
+        rgba(215,65,167,.88),
+        rgba(230,250,48,.88)
+         ),
+        url("../img/hero.jpg");
        background-size: cover;
-       height: 500px;
+       margin: 0 auto;
  }
 
-    header img {
-      width: 25%;
-      margin: 0 auto;
-      display: block;
-      padding-top: 45px;
-    }
+ #introduction, #newsletter {
+   padding: 20px 25px;
+ }
 
-    p {
-        font-size: 20px;
-        line-height: 32px;
-        padding: 0 130px;
-      }
-
-      #newsletter h2 {
-        font-family: "Monoton", sans-serif;
-        color: #ffffff;
-        font-size: 36px;
-        font-weight: lighter;
-      }
-
-      #introduction h2 {
-          text-align: center;
-          color: #3d3d3d;
-          font-size: 36px;
-          line-height: 30px;
-      }
-
-}
-
-
+   }
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),

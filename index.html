@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Coworking Festival 2018</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
@@ -24,25 +26,26 @@
 
   <!-- Add your site or application content here -->
 
-    <header>
-      <!--
-      <div class="full-width nav-bar">
-          <div class="half-width">
-            <h1>cowork</h1>
-          </div>
-          <div class="half-width">
-            <nav>
-              <ul>
-                <li><a href="../html/schedule.html">schedule</a></li>
-                <li><a href="../html/tours.html">tours</a></li>
-                <li><a href="../html/contact.html">contact</a></li>
-                <li><a href="../html/faq.html">faq</a></li>
-              </ul>
-            </nav>
-          </div>
-      </div>  -->
-      <div class="full-width gradient">
-        <img id="logo-lockup" src="img/logo-lockup-g.svg" />
+<header>
+  <div class="full-width">
+    <div class="one-third-width" id="header">
+      <!--hiding logo for first round
+      <a href="index.html"><h1 class="logo">cowork</h1></a>-->
+      <h3 class="language"><a href="../html/en.html">EN</a>&emsp;&mid;&emsp;<a href="../html/de.html">DE</a></h3>
+    </div>
+    <!--hiding nav for first round
+    <nav>
+        <a class="two-third-width"></a>
+        <ul>
+          <li><a href="../html/contact.html">contact</a></li>
+          <li><a href="../html/faq.html">faq</a></li>
+          <li><a href="../html/tours.html">tours</a></li>
+          <li><a href="../html/schedule.html">schedule</a></li>
+        </ul>
+      </nav>
+    -->
+    <div class="full-width">
+        <img src="img/logo-lockup-p.svg" />
       </div>
     </header>
 
@@ -62,28 +65,34 @@
           <h2>STAY TUNED</h2>
           <p>
             Take a tour, visit your neighborhood space, or join an event to see what coworking has to offer!
+          <br /><span>Signup for the newsletter to stay up to date on event details.</span>
           </p>
-          <p>
-            <span>Signup for the newsletter to stay up to date on event details.</span>
-          </p>
-          <button class="btn">signup today</button>
+          <p id="btn-padding">
+          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd2Rnu8137-d2BnQpbffWXTsvhDysF0abh7fll4Q1GB5enVfA/viewform" target="_blank">signup today</a></p>
         </div>
       </section>
     </main>
     <footer id="contact">
       <div class="full-width">
+        <div class="half-width">
           <p><span>Get in touch</span><br />
-          berlincoworking@gmail.com</p>
-          <a href="https://twitter.com/berlincoworking"><img id="right-pad" src="img/twitter.svg" alt="twitter" height="30px" width="30px" /></a>
-          <a href="https://www.facebook.com/berlincoworking/"><img src="img/facebook.svg" alt="facebook" height="30px" width="30px" /></a>
+          <a href="mailto:berlincoworking@gmail.com" target="_blank">berlincoworking@gmail.com</p></a>
+          <p>
+          <a href="#" id="imprint" target="_blank">Imprint</a></p>
+        </div>
+        <div class="half-width" id="social-media">
+          <p>
+          <a href="https://twitter.com/berlincoworking" target="_blank"><img id="right-pad" src="img/twitter.svg" alt="twitter" height="30px" width="30px" /></a>
+          <a href="https://www.facebook.com/berlincoworking/" target="_blank"><img src="img/facebook.svg" alt="facebook" height="30px" width="30px" /></a></p>
+        </div>
       </div>
     </footer>
-
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
+  <script src="js/menu.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
