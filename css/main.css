@@ -122,9 +122,6 @@ textarea {
      a {
        text-decoration: none;
      }
-   span a {
-      color: #3a1772;
-   }
 
      /***** GRID *****/
 
@@ -274,6 +271,10 @@ header h3 a {
 #newsletter span {
   font-weight: 600;
 }
+
+#newsletter span a {
+   color: #e6fa30;
+     }
 
 #newsletter .btn {
   -webkit-border-radius: 0;
