@@ -272,6 +272,10 @@ header h3 a {
   font-weight: 600;
 }
 
+#newsletter span a {
+   color: #e6fa30;
+     }
+
 #newsletter .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
