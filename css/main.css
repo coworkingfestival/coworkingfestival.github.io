@@ -203,26 +203,30 @@ nav {
   height: 40px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+nav > * {
+  border: 1px dotted red;
 }
 
-nav ul li{
-    float: left;
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-nav ul li a {
-    display: block;
-    text-align: center;
-    padding: 6px 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    color: #3a1772;
+.nav-list li {
+  float: left;
+}
+
+.nav-list a {
+  display: block;
+  text-align: center;
+  padding: 6px 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3a1772;
 }
 
 header h3 {
@@ -250,15 +254,17 @@ header  a {
 }
 
 .logo {
+  display: inline-block;
+}
+
+.logo h1 {
   font-family: "Monoton", sans-serif;
   color: #3a1772;
   font-weight: lighter;
   text-align: center;
-  display: inline;
   text-transform: uppercase;
   @include transition(all .3s ease);
   font-size: 1.2em;
-  padding: 10px 0;
 }
 
 header img {
@@ -848,19 +854,19 @@ p #imprint {
      background: url(../img/burger-icon.png) no-repeat 98% center;
    }
 
-   nav ul {
+   .nav-list {
      overflow: hidden;
      background: #d741a7;
      height: 0;
    }
 
-   nav ul.open {
+   .nav-list.open {
      height: auto;
      clear:both;
      background: #d741a7;
    }
 
-   nav ul li {
+   .nav-list li {
      float: none;
      text-align: left;
      width: 100%;
@@ -868,23 +874,15 @@ p #imprint {
      background: #d741a7;
    }
 
-   nav ul li a {
+   .nav-list a {
      color: #ffffff;
      padding: 10px;
      display: block;
      margin: 0;
    }
 
-   /* .feature {
-     width: 80%;
-     margin: 0 auto;
-     height: 20em;
-     max-width: 50%;
-   }*/
-
    .description {
      float: left;
-     /**border: 1px green solid;**/
    }
 
 
@@ -906,10 +904,7 @@ p #imprint {
     margin-left: 330px;
   }
 
-  nav {
-  }
-
-  nav ul {
+  .nav-list {
     float: right;
   }
 
@@ -936,7 +931,6 @@ p #imprint {
   }
 
   .feature #f-image {
-   /**border: 1px pink solid;**/
    float: left;
    max-width: 70%;
   }
@@ -969,7 +963,6 @@ p #imprint {
     padding-left: 10px;
     width: 40%;
     float: left;
-    /**border: 1px green solid;**/
   }
  }
 
@@ -986,7 +979,6 @@ p #imprint {
    }
 
    #f-image {
-    /**border: 1px pink solid;**/
     float: left;
     display: inline;
     width: 40%;
@@ -997,7 +989,6 @@ p #imprint {
    }
 
   #f-title {
-    /**border: 1px gray solid;**/
     float: left;
     padding-left: 40px;
     width: 50%;
@@ -1021,7 +1012,6 @@ p #imprint {
      padding-left: 40px;
      width: 35%;
      float: left;
-     /**border: 1px green solid;**/
    }
 
    .container {
