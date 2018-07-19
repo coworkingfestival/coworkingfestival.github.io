@@ -271,8 +271,7 @@ header h3 {
   line-height: 0.4em;
 }
 
-.faq h2,
-.tours h2 {
+.small-heading {
   font-family: 'Mukta+Vaani', sans-serif;
   font-size: 1em;
   text-align: left;
@@ -458,55 +457,6 @@ button.accordion:hover {
   background: #e8f46d;
   text-decoration: none;
 }
-/***** faq *****/
-#faq-banner {
-  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/faq-banner.png") no-repeat center center;
-  background-size: cover;
-  margin: 0 auto;
-  height: 15em;
-}
-
-.faq img {
-  padding: 10% 0 5%;
-  margin: 0 auto;
-  width: 99%;
-}
-
-.faq {
-  padding: 0 8%;
-  margin: 0 auto;
-}
-
-.faq a {
-  color: #3C2970;
-  font-weight: 600;
-}
-
-.faq li,
-.faq p {
-  text-align: left;
-  padding: 0 0 20px;
-  margin: 0 auto;
-  font-size: 0.9em;
-  line-height: 1.5em;
-  border-bottom: 1px solid $color-pink;
-}
-
-.faq li {
-  border: 0;
-  padding: 0;
-}
-
-.faq #no-border {
-  border: 0;
-  padding-bottom: 20%;
-}
-
-.faq ol {
-  border: 0;
-  list-style-position: none;
-  padding-left: inherit;
-}
 /***** footer *****/
 footer {
   background: $color-text;
@@ -616,11 +566,8 @@ p #imprint {
 .clearfix:after {
   clear: both;
 }
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+
+// Media Queries for Responsive Design.
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -643,10 +590,6 @@ p #imprint {
     text-align: center;
   }
 
-  .faq ol {
-    padding-left: inherit;
-    margin-left: 330px;
-  }
 }
 /* Medium devices (landscape tablets, 768px and below) */
 @media only screen and (max-width: 768px) {
@@ -697,11 +640,6 @@ p #imprint {
   #introduction,
   #newsletter {
     padding: 40px 100px;
-  }
-
-  .faq ol {
-    padding-left: inherit;
-    margin-left: 330px;
   }
 
   #map {
@@ -817,11 +755,6 @@ p #imprint {
     padding: 0;
   }
 
-  .faq img {
-    padding: 2% 2% 0 0;
-    float: left;
-  }
-
   #contact-p {
     text-align: center;
     padding: 20px;
@@ -831,61 +764,10 @@ p #imprint {
   #contact-p p {
     text-align: center;
   }
-
-  .faq h2,
-  .faq p {
-    border: 0;
-    padding: 0;
-  }
-
-  .faq ol {
-    padding-left: inherit;
-    margin-left: 490px;
-  }
-
-  .faq {
-    padding-top: 3%;
-  }
-
-  .faq img {
-    padding-top: 0;
-    width: 40%;
-  }
-
-  .faq #img-left {
-    clear: both;
-    padding-top: 20px;
-  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .main-header-graphic {
     width: 25%;
-  }
-
-  .faq h2,
-  .faq p {
-    border: 0;
-    padding: 0;
-  }
-
-  .faq ol {
-    padding-left: inherit;
-    margin-left: 330px;
-  }
-
-  .faq {
-    padding-top: 3%;
-  }
-
-  .faq img {
-    padding-top: 0;
-    width: 30%;
-  }
-
-  .faq #img-left {
-    clear: both;
-    padding-top: 20px;
-    padding-bottom: 40px;
   }
 }

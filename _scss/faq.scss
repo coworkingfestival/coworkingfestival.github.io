@@ -1,0 +1,111 @@
+
+/***** faq *****/
+#faq-banner {
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/faq-banner.png") no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  height: 15em;
+}
+
+.faq img {
+  padding: 10% 0 5%;
+  margin: 2rem auto 2rem;
+  width: 99%;
+}
+
+.faq {
+  padding: 0 8%;
+  margin: 0 auto;
+}
+
+.faq a {
+  color: #3C2970;
+  font-weight: 600;
+}
+
+.faq li,
+.faq p {
+  text-align: left;
+  padding: 0 0 20px;
+  margin: 0 auto;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  border-bottom: 1px solid $color-pink;
+  overflow: hidden;
+}
+
+.faq li {
+  border: 0;
+  padding: 0;
+}
+
+.faq #no-border {
+  border: 0;
+  padding-bottom: 20%;
+}
+
+.faq ol {
+  border: 0;
+  list-style-position: none;
+  padding-left: inherit;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .faq ol {
+    padding-left: inherit;
+  }
+
+  .faq img {
+    padding: 2% 2% 0 0;
+    float: left;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .faq h2,
+  .faq p {
+    border: 0;
+    padding: 0;
+  }
+
+  .faq {
+    padding-top: 3%;
+  }
+
+  .faq img {
+    padding-top: 0;
+    width: 40%;
+  }
+
+  .faq #img-left {
+    clear: both;
+    padding-top: 20px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .faq h2,
+  .faq p {
+    border: 0;
+    padding: 0;
+  }
+
+  .faq {
+    padding-top: 3%;
+  }
+
+  .faq img {
+    padding-top: 0;
+    width: 30%;
+  }
+
+  .faq #img-left {
+    clear: both;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
