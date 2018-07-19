@@ -96,87 +96,111 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   body {
-     font-family: 'Mukta+Vaani', sans-serif;
-     color: #3d3d3d;
-     font-size: 16px;
-     text-align: center;
-     font-weight: 400;
-   }
 
-   #introduction, #newsletter {
-       height: 20%;
-       padding: 15px 0;
 
-   }
+body {
+  font-family: 'Mukta+Vaani', sans-serif;
+  color: #3d3d3d;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+}
 
-   h1 {
-     margin: 0;
-   }
+#introduction, #newsletter {
+  height: 20%;
+  padding: 15px 0;
+}
 
-   p {
-       line-height: 28px;
-       padding: 0 30px;
-     }
+h1 {
+  margin: 0;
+}
 
-     a {
-       text-decoration: none;
-     }
+p {
+  line-height: 28px;
+  padding: 0 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  font-family: "Monoton", sans-serif;
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: lighter;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 90px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 
      /***** GRID *****/
 
-     .full-width {
-       width: 100%;
-       margin: 0 auto;
-     }
+.full-width {
+  width: 100%;
+  margin: 0 auto;
+}
 
-     .half-width {
-       float: left;
-       width: 50%;
-     }
+.half-width {
+  float: left;
+  width: 50%;
+}
 
-     .one-third-width {
-       width: auto;
-       float: right;
-       padding-right: 20px;
-     }
+.one-third-width {
+  width: .3333%;
+  float: left;
+  padding-right: 20px;
+}
 
-     /*** When nav is visible, change float to left:
-     .one-third-width {
-       width: auto;
-       float: left;
-     }
-     ***/
+.two-third-width {
+  width: .666%;
+  float:right;
+}
 
-     .two-third-width {
-       width: auto;
-       float:right;
-     }
 
 
    /***** HEADER *****/
 
-   header {
-      background:
-        linear-gradient(to right,
-        rgba(215,65,167,.88),
-        rgba(230,250,48,.88)
-        ),
-        url("../img/hero.jpg");
-      background-size: auto;
-      margin: 0 auto;
-}
-#nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+header {
+  background:
+    linear-gradient(to right,
+    rgba(215,65,167,.88),
+    rgba(230,250,48,.88)
+    )
+   }
 
+.homepage {
+  background:
+    linear-gradient(to right,
+    rgba(215,65,167,.88),
+    rgba(230,250,48,.88)
+    ),
+    url("../img/hero.jpg");
+    background-size: auto;
+    margin: 0 auto;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #d741a7;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.menu {
+  width: 10%;
 }
 
 nav {
-  float: right;
+  @include transition(all .5s ease);
+  height: 40px;
 }
 
 nav ul {
@@ -185,13 +209,15 @@ nav ul {
     padding: 0;
     overflow: hidden;
 }
+
 nav ul li{
-    float: right;
+    float: left;
 }
+
 nav ul li a {
     display: block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 6px 16px;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 16px;
@@ -206,50 +232,53 @@ header h3 {
   color: #3a1772;
 }
 
-header h3 a {
+header  a {
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: #3a1772;
-
 }
 
 .language {
   color: #3d3d3d;
-  font-size: 12;
   font-weight: 600;
-  float: left;
-  padding-left: 20px;
+  float: right;
+  margin: 3px 0 0 0;
+  padding: 0 10px 0 0;
 }
 
-  .logo {
+.language a {
+  color: #3D3D3D;
+}
+
+.logo {
   font-family: "Monoton", sans-serif;
-   color: #3a1772;
-   font-size: 25px;
-   font-weight: lighter;
-   padding-left: 20px;
-   }
+  color: #3a1772;
+  font-weight: lighter;
+  text-align: center;
+  display: inline;
+  text-transform: uppercase;
+  @include transition(all .3s ease);
+  font-size: 1.2em;
+  padding: 10px 0;
+}
 
-
-   header img {
-    width: 55%;
-    margin: 0 auto;
-    display: block;
-    clear: both;
-    padding-bottom: 20px;
-   }
+header img {
+  width: 55%;
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  padding: 20px;
+}
 
    /***** INTRODUCTION *****/
 
 #introduction h2 {
-    text-align: center;
-    color: #d741a7;
-    font-size: 26px;
-    line-height: 30px;
+  text-align: center;
+  color: #d741a7;
+  font-size: 26px;
+  line-height: 30px;
 }
 
-/***** newsletter *****/
+  /***** newsletter *****/
 
 #newsletter {
   background: #d741a7;
@@ -262,6 +291,7 @@ header h3 a {
   font-size: 26px;
   font-weight: lighter;
   word-spacing: 10px;
+  text-transform: uppercase;
 }
 
 #newsletter p {
@@ -273,10 +303,10 @@ header h3 a {
 }
 
 #newsletter span a {
-   color: #e6fa30;
+  color: #e6fa30;
      }
 
-#newsletter .btn {
+#newsletter .btn, .contact .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 5px;
@@ -300,30 +330,370 @@ header h3 a {
   padding: 8px 0;
 }
 
+/***** tours *****/
+
+#tours-banner  {
+  background:
+    linear-gradient(to right,
+    rgba(215,65,167,.88),
+    rgba(230,250,48,.88)
+    ),
+    url("../img/tours.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  height: 15em;
+}
+
+.tours {
+  padding: 10% 8%;
+  height: 220px;
+}
+
+#tours-gray {
+  background: #EFEFEC;
+  height: 220px;
+}
+
+#map {
+  padding: 20px;
+  margin: 0 auto;
+
+}
+
+#googlemap {
+  border: 1px #BBB solid;
+}
+
+
+.time {
+  font-size: .8em;
+  color: #A5A5A3;
+  text-align: left;
+  padding: 0;
+  line-height: .4em;
+}
+
+.tours h2, .faq h2 {
+  font-family: 'Mukta+Vaani', sans-serif;
+  font-size: 1em;
+  text-align: left;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.tours h3 {
+  color: #D741A7;
+  font-weight: 600;
+  text-align: left;
+  font-size: 1em;
+}
+
+#tour-start-end p {
+  text-align: left;
+  padding: 0;
+  margin: 0 auto;
+  font-size: .9em;
+  line-height: 1.5em;
+}
+
+#tour-start-end p span {
+  font-weight: 600;
+  color: #A5A5A3;
+}
+
+#tour-start-end a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+#tour-start-end a:hover {
+  color: #D741A7;
+}
+
+/***** schedule *****/
+
+#schedule-banner  {
+  background:
+    linear-gradient(to right,
+    rgba(215,65,167,.88),
+    rgba(230,250,48,.88)
+    ),
+    url("../img/schedule-banner.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  height: 15em;
+}
+
+.feature {
+  padding: 20px;
+  width: auto;
+  /* max-width: 50%; */
+}
+
+.feature img {
+  float: right;
+  display: block;
+
+}
+
+.feature h3 {
+  font-size: 1em;
+  font-weight: 400;
+  background-color: #D741A7;
+  padding: 3px 20px;
+  width: 70%;
+  color: #ffffff;
+  float: left;
+  text-align: left;
+  margin-top: -27.5px;
+  letter-spacing: .05em;
+}
+
+.description p {
+  color: inherit;
+  text-align: left;
+  padding: inherit;
+  clear: both;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#drop-down {
+  margin-bottom: 50px;
+}
+
+button.accordion {
+  width: 100%;
+  background-color: #EFEFEC;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  font-family: "Monoton", sans-serif;
+  color: #D741A7;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+button.accordion span {
+  font-family: 'Mukta+Vaani', sans-serif;
+  color: #3d3d3d;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#white {
+  background-color: white;
+
+}
+
+#white:hover {
+  background-color: #E5E5E5;
+}
+
+button.accordion:after {
+  content: '\f13a';
+  font-family: "fontawesome";
+  font-size: 1em;
+  font-weight: bolder;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: '\f139';
+}
+
+button.accordion:hover, button.accordion.is-open {
+  background-color: #E5E5E5;
+}
+
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.event {
+  text-align: left;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.row-1 p {
+  float: left;
+  background-color: #F7F7F7;
+  padding: 10px 0 10px 10px;
+  width: 45%;
+  margin-bottom: 10px;
+  line-height: 10px;
+}
+
+.row-1-pink p {
+  float:left;
+  background-color: #f7e9f3;
+  padding: 10px 0 10px 10px;
+  width: 45%;
+  margin-bottom: 10px;
+  line-height: 10px;
+}
+
+#place{
+  float: right;
+}
+
+.row-2 p {
+  clear: both;
+  background-color: #F7F7F7;
+  padding: 5px 10px;
+}
+
+.row-2-pink p {
+  clear: both;
+  background-color: #f7e9f3;
+  padding: 5px 10px;
+}
+
+/***** contact *****/
+
+#contact-banner  {
+  background:
+    linear-gradient(to right,
+    rgba(215,65,167,.88),
+    rgba(230,250,48,.88)
+    ),
+    url("../img/contact-banner.png") no-repeat center center;
+  background-size: cover;
+  height: 15em;
+}
+
+.contact {
+  padding-bottom: 20px;
+}
+
+#contact-p {
+  background-color: #eeeeee;
+}
+
+#contact-p h2 {
+  padding: 10px 0px 0px 0;
+  line-height: 0;
+}
+
+#contact-p p {
+  text-align: left;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+.contact h2 {
+  font-family: "Monoton", sans-serif;
+  color: #D741A7;
+  font-size: 26px;
+  font-weight: lighter;
+  word-spacing: 10px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.contact .btn:hover {
+  background: #e8f46d;
+  text-decoration: none;
+}
+
+/***** faq *****/
+
+#faq-banner  {
+  background:
+    linear-gradient(to right,
+    rgba(215,65,167,.88),
+    rgba(230,250,48,.88)
+    ),
+    url("../img/faq-banner.png") no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  height: 15em;
+}
+
+.faq img {
+  padding: 10% 0 5% 0;
+  margin: 0 auto;
+  width: 99%;
+}
+
+.faq {
+  padding: 0% 8% 0;
+  margin: 0 auto;
+}
+
+.faq a {
+  color: #3C2970;
+  font-weight: 600;
+
+}
+
+.faq p, .faq li {
+  text-align: left;
+  padding: 0 0 20px 0;
+  margin: 0 auto;
+  font-size: .9em;
+  line-height: 1.5em;
+  border-bottom: 1px solid #D741A7;
+}
+
+.faq li {
+  border: 0;
+  padding: 0;
+}
+
+.faq #no-border {
+  border: 0;
+  padding-bottom: 20%;
+}
+
+.faq ol{
+  border: 0;
+  list-style-position: none;
+  padding-left:inherit;
+}
+
 /***** footer *****/
 
 footer {
-    background: #3d3d3d;
-    height: 150px;
-    padding: 20px 0 25px 0;
+  background: #3d3d3d;
+  height: 150px;
+  padding: 20px 0 25px 0;
 }
 
 #contact p {
-    color: #ffffff;
-    text-align: left;
+  color: #ffffff;
+  text-align: left;
 }
 
 #contact span {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #contact a {
-    text-decoration: none;
-    color: #e6fa30;
+  text-decoration: none;
+  color: #e6fa30;
 }
 
 #right-pad {
-    padding-right: 8px;
+  padding-right: 8px;
 }
 
 p #imprint {
@@ -431,161 +801,335 @@ p #imprint {
    Modify as content requires.
    ========================================================================== */
 
-   /*
-     ##Device = Desktops
-     ##Screen = 1281px to higher resolution desktops
-   */
+   /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
 
-   @media (min-width: 1281px) {
 
-     header img {
-       width: 20%;
-     }
-     #introduction, #newsletter {
-       padding-left: 100px;
-       padding-right: 100px;
-     }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+   header img {
+     width: 30%;
    }
-
-   /*
-     ##Device = Laptops, Desktops
-     ##Screen = B/w 1025px to 1280px
-   */
-
-   @media (min-width: 1025px) and (max-width: 1280px) {
-
-     header img {
-       width: 20%;
-     }
-     #introduction, #newsletter {
-       padding-left: 50px;
-       padding-right: 50px;
-     }
-
-   }
-
-   /*
-     ##Device = Tablets, Ipads (portrait)
-     ##Screen = B/w 768px to 1024px
-   */
-
-   @media (min-width: 768px) and (max-width: 1024px) {
-
-     header img {
-       width: 27%;
-     }
-     #introduction, #newsletter {
-       padding: 20px 50px;
-     }
-
-   }
-
-@media (min-width: 300px) and (max-width: 1024px) {
-
-#header {
-  z-index: 1;
-}
-  .one-third-width {
-    float: right;
-    padding-right: 20px;
+   .menu {
+    width: 6%;
   }
 
-/*unhide when nav needs to appear
-#header {
-  z-index: 1;
-  position: fixed;
-}
-  .one-third-width {
-    float: left;
-  }
-  */
-
-
-  .two-third-width {
-    display: block;
-    float: none;
-    height: 40px;
-    width: 100%;
-    background: url(../img/burger-icon.png) no-repeat 98% center;
+   #map {
+     padding: 20px 100px;
+     margin: 0 auto;
    }
 
-     nav {
-       width: 100%;
-       float: center;
-     }
-     nav ul {
-         overflow: hidden;
-         background: #d741a7;
-         height: 0;
-     }
+   #contact-p {
+        text-align: center;
+        padding: 20px;
+      }
 
-     nav ul.open {
-       height: auto;
-     }
+   #contact-p p, #contact-p h2 {
+         text-align: center;
+       }
 
-     nav ul li {
-         float: none;
-         text-align: left;
-         width: 100%;
-         margin: 0;
-     }
+.faq ol {
+    padding-left: inherit;
+    margin-left: 330px;
+}
+
+ }
+
+ /* Medium devices (landscape tablets, 768px and below) */
+ @media only screen and (max-width: 768px) {
+
+   .menu {
+     display: block;
+     float: left;
+     height: 40px;
+     background: url(../img/burger-icon.png) no-repeat 98% center;
+   }
+
+   nav ul {
+     overflow: hidden;
+     background: #d741a7;
+     height: 0;
+   }
+
+   nav ul.open {
+     height: auto;
+     clear:both;
+     background: #d741a7;
+   }
+
+   nav ul li {
+     float: none;
+     text-align: left;
+     width: 100%;
+     margin: 0;
+     background: #d741a7;
+   }
+
    nav ul li a {
-        color: #ffffff;
-        padding: 10px;
-        display: block;
-        margin: 0;
-    }
+     color: #ffffff;
+     padding: 10px;
+     display: block;
+     margin: 0;
+   }
 
-    .logo {
-     padding-left: 0;
-     }
+   /* .feature {
+     width: 80%;
+     margin: 0 auto;
+     height: 20em;
+     max-width: 50%;
+   }*/
+
+   .description {
+     float: left;
+     /**border: 1px green solid;**/
    }
 
 
-   /*
-     ##Device = Tablets, Ipads (landscape)
-     ##Screen = B/w 768px to 1024px
-   */
-
-   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-     header img {
-       width: 27%;
-     }
-     #introduction, #newsletter {
-       padding-left: 50px;
-       padding-right: 50px;
-     }
-
-   }
-
-   /*
-     ##Device = Low Resolution Tablets, Mobiles (Landscape)
-     ##Screen = B/w 481px to 767px
-   */
-
-   @media (min-width: 481px) and (max-width: 767px) {
-
-    header img {
-      width: 30%;
-    }
-
-    header {
-       background:
-        linear-gradient(to right,
-        rgba(215,65,167,.88),
-        rgba(230,250,48,.88)
-         ),
-        url("../img/hero.jpg");
-       background-size: cover;
-       margin: 0 auto;
  }
 
- #introduction, #newsletter {
-   padding: 20px 25px;
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+
+   header img {
+     width: 30%;
+   }
+   #introduction, #newsletter {
+     padding: 40px 100px;
+
+  }
+
+  .faq ol {
+    padding-left: inherit;
+    margin-left: 330px;
+  }
+
+  nav {
+  }
+
+  nav ul {
+    float: right;
+  }
+
+  .logo {
+    float: left;
+    padding: 7px 0px 0px 10px;
+
+  }
+
+  .language {
+    float: right;
+  }
+
+  #map {
+    padding: 20px 100px;
+    margin: 0 auto;
+  }
+
+  .feature {
+    width: 80%;
+    margin: 0 auto;
+    height: 12em;
+
+  }
+
+  .feature #f-image {
+   /**border: 1px pink solid;**/
+   float: left;
+   max-width: 70%;
+  }
+
+.feature img {
+   width: 100%;
+  }
+
+ #f-title {
+   float: left;
+   padding-left: 20px;
+   width: 30%
+
  }
 
+  .feature h3 {
+    font-size: 1em;
+    font-weight: 400;
+    background-color: #D741A7;
+    padding: 8px 20px;
+    color: #ffffff;
+    text-align: left;
+    letter-spacing: .05em;
+    margin: 0 auto;
+  }
+
+  .description {
+    color: inherit;
+    text-align: left;
+    padding-left: 10px;
+    width: 40%;
+    float: left;
+    /**border: 1px green solid;**/
+  }
+ }
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+   header img {
+     width: 25%;
    }
+
+   .feature {
+     margin: 0 auto;
+     height: 20em;
+     max-width: 70%;
+   }
+
+   #f-image {
+    /**border: 1px pink solid;**/
+    float: left;
+    display: inline;
+    width: 40%;
+   }
+
+.feature img {
+    width: 100%;
+   }
+
+  #f-title {
+    /**border: 1px gray solid;**/
+    float: left;
+    padding-left: 40px;
+    width: 50%;
+
+  }
+
+   .feature h3 {
+     font-size: 1em;
+     font-weight: 400;
+     background-color: #D741A7;
+     padding: 8px 20px;
+     color: #ffffff;
+     text-align: left;
+     letter-spacing: .05em;
+     margin: 0 auto;
+   }
+
+   .description {
+     color: inherit;
+     text-align: left;
+     padding-left: 40px;
+     width: 35%;
+     float: left;
+     /**border: 1px green solid;**/
+   }
+
+   .container {
+     width: 70%;
+     margin: 0 auto;
+   }
+
+   button.accordion {
+     font-size: 1.5em;
+   }
+
+   button.accordion span {
+     font-size: .8em;
+   }
+
+   .event {
+     font-size: 1em;
+   }
+
+  .row-1 p, .row-1-pink p {
+     margin-bottom: 10px;
+     width: 48.5%;
+     padding: 15px 0 10px 10px;
+   }
+
+   footer {
+     clear: both;
+   }
+
+   .description p {
+     padding: 0;
+   }
+
+   .faq img {
+     padding: 2% 2% 0 0;
+     float: left;
+   }
+
+#contact-p {
+     text-align: center;
+     padding: 20px;
+   }
+
+#contact-p p, #contact-p h2 {
+      text-align: center;
+    }
+
+.faq p, .faq h2 {
+  border: 0;
+  padding: 0;
+}
+
+.faq ol {
+  padding-left: inherit;
+      margin-left: 490px;
+}
+
+.faq {
+  padding-top: 3%;
+}
+
+.faq img {
+  padding-top: 0;
+  width: 40%;
+}
+
+.faq #img-left {
+  clear:both;
+  padding-top: 20px;
+}
+
+
+ }
+
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+   header img {
+     width: 25%;
+   }
+
+   .faq p, .faq h2 {
+     border: 0;
+     padding: 0;
+   }
+
+   .faq ol {
+     padding-left: inherit;
+     margin-left: 330px;
+   }
+
+   .faq {
+     padding-top: 3%;
+   }
+
+   .faq img {
+     padding-top: 0;
+     width: 30%;
+   }
+
+   .faq #img-left {
+     clear:both;
+     padding-top: 20px;
+     padding-bottom: 40px;
+   }
+
+
+ }
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
