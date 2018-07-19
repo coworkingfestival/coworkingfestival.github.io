@@ -412,45 +412,6 @@ button.accordion:hover {
   transition: max-height 0.2s ease-in-out;
 }
 
-.event {
-  text-align: left;
-  font-size: 1em;
-  line-height: 1em;
-}
-
-.row-1 p {
-  float: left;
-  background-color: #F7F7F7;
-  padding: 10px 0 10px 10px;
-  width: 45%;
-  margin-bottom: 10px;
-  line-height: 10px;
-}
-
-.row-1-pink p {
-  float: left;
-  background-color: #f7e9f3;
-  padding: 10px 0 10px 10px;
-  width: 45%;
-  margin-bottom: 10px;
-  line-height: 10px;
-}
-
-#place {
-  float: right;
-}
-
-.row-2 p {
-  clear: both;
-  background-color: #F7F7F7;
-  padding: 5px 10px;
-}
-
-.row-2-pink p {
-  clear: both;
-  background-color: #f7e9f3;
-  padding: 5px 10px;
-}
 /***** contact *****/
 #contact-banner {
   background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/contact-banner.png") no-repeat center center;
@@ -842,17 +803,6 @@ p #imprint {
 
   button.accordion span {
     font-size: 0.8em;
-  }
-
-  .event {
-    font-size: 1em;
-  }
-
-  .row-1 p,
-  .row-1-pink p {
-    margin-bottom: 10px;
-    width: 48.5%;
-    padding: 15px 0 10px 10px;
   }
 
   footer {
