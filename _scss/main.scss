@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+a, button, input, textarea, select {
+  transition: all 0.25s ease;
+}
+
 .title {
   font-family: "Monoton", sans-serif;
   color: $color-white;
@@ -98,7 +102,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  transition: all 0.5s ease;
+  transition: all 0.25s ease;
 }
 
 .menu-toggle {
@@ -161,7 +165,7 @@ header h3 {
     font-weight: lighter;
     text-align: center;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     font-size: 1.2em;
   }
 }
@@ -360,7 +364,7 @@ button.accordion {
   text-align: left;
   padding: 20px;
   cursor: pointer;
-  transition: background-color 0.2s linear;
+  transition: background-color 0.25s ease;
   font-family: "Monoton", sans-serif;
   color: $color-pink;
   font-size: 1em;
@@ -409,7 +413,7 @@ button.accordion:hover {
   padding: 0 15px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.25s ease-in-out;
 }
 
 /***** contact *****/
