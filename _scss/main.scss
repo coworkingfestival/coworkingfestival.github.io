@@ -1,21 +1,17 @@
 /*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
-
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -25,79 +21,65 @@ html {
  *
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
-
 /*
  * A better looking default horizontal rule
  */
-
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
-
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-
 audio,
 canvas,
 iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
-
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
-
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
-
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
-
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
 body {
   font-family: 'Mukta+Vaani', sans-serif;
   color: #3d3d3d;
@@ -106,7 +88,8 @@ body {
   font-weight: 400;
 }
 
-#introduction, #newsletter {
+#introduction,
+#newsletter {
   height: 20%;
   padding: 15px 0;
 }
@@ -135,10 +118,7 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
-
-     /***** GRID *****/
-
+/***** GRID *****/
 .full-width {
   width: 100%;
   margin: 0 auto;
@@ -150,37 +130,24 @@ a {
 }
 
 .one-third-width {
-  width: .3333%;
+  width: 0.3333%;
   float: left;
   padding-right: 20px;
 }
 
 .two-third-width {
-  width: .666%;
-  float:right;
+  width: 0.666%;
+  float: right;
+}
+/***** HEADER *****/
+header {
+  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) );
 }
 
-
-
-   /***** HEADER *****/
-
-header {
-  background:
-    linear-gradient(to right,
-    rgba(215,65,167,.88),
-    rgba(230,250,48,.88)
-    )
-   }
-
 .homepage {
-  background:
-    linear-gradient(to right,
-    rgba(215,65,167,.88),
-    rgba(230,250,48,.88)
-    ),
-    url("../img/hero.jpg");
-    background-size: auto;
-    margin: 0 auto;
+  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/hero.jpg");
+  background-size: auto;
+  margin: 0 auto;
 }
 
 .sticky {
@@ -198,12 +165,12 @@ header {
   width: 10%;
 }
 
-nav {
-  @include transition(all .5s ease);
+.navigation {
+  transition: all 0.5s ease;
   height: 40px;
 }
 
-nav > * {
+.navigation > * {
   border: 1px dotted red;
 }
 
@@ -236,7 +203,7 @@ header h3 {
   color: #3a1772;
 }
 
-header  a {
+header a {
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -245,7 +212,7 @@ header  a {
   color: #3d3d3d;
   font-weight: 600;
   float: right;
-  margin: 3px 0 0 0;
+  margin: 3px 0 0;
   padding: 0 10px 0 0;
 }
 
@@ -263,7 +230,7 @@ header  a {
   font-weight: lighter;
   text-align: center;
   text-transform: uppercase;
-  @include transition(all .3s ease);
+  transition: all 0.3s ease;
   font-size: 1.2em;
 }
 
@@ -274,21 +241,17 @@ header img {
   clear: both;
   padding: 20px;
 }
-
-   /***** INTRODUCTION *****/
-
+/***** INTRODUCTION *****/
 #introduction h2 {
   text-align: center;
   color: #d741a7;
   font-size: 26px;
   line-height: 30px;
 }
-
-  /***** newsletter *****/
-
+/***** newsletter *****/
 #newsletter {
   background: #d741a7;
-  padding: 20px 0 25px 0;
+  padding: 20px 0 25px;
 }
 
 #newsletter h2 {
@@ -310,18 +273,19 @@ header img {
 
 #newsletter span a {
   color: #e6fa30;
-     }
+}
 
-#newsletter .btn, .contact .btn {
+#newsletter .btn,
+.contact .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 5px;
-  border: 0px;
+  border: 0;
   color: #3a1772;
   font-family: 'Mukta+Vaani', sans-serif;
   font-size: 16px;
   background: #e6fa30;
-  padding: 15px 40px 15px 40px;
+  padding: 15px 40px;
   text-decoration: none;
   text-transform: uppercase;
   margin: 50px 0;
@@ -335,16 +299,9 @@ header img {
 #btn-padding {
   padding: 8px 0;
 }
-
 /***** tours *****/
-
-#tours-banner  {
-  background:
-    linear-gradient(to right,
-    rgba(215,65,167,.88),
-    rgba(230,250,48,.88)
-    ),
-    url("../img/tours.jpg");
+#tours-banner {
+  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/tours.jpg");
   background-size: cover;
   margin: 0 auto;
   height: 15em;
@@ -363,23 +320,22 @@ header img {
 #map {
   padding: 20px;
   margin: 0 auto;
-
 }
 
 #googlemap {
   border: 1px #BBB solid;
 }
 
-
 .time {
-  font-size: .8em;
+  font-size: 0.8em;
   color: #A5A5A3;
   text-align: left;
   padding: 0;
-  line-height: .4em;
+  line-height: 0.4em;
 }
 
-.tours h2, .faq h2 {
+.faq h2,
+.tours h2 {
   font-family: 'Mukta+Vaani', sans-serif;
   font-size: 1em;
   text-align: left;
@@ -398,7 +354,7 @@ header img {
   text-align: left;
   padding: 0;
   margin: 0 auto;
-  font-size: .9em;
+  font-size: 0.9em;
   line-height: 1.5em;
 }
 
@@ -415,16 +371,9 @@ header img {
 #tour-start-end a:hover {
   color: #D741A7;
 }
-
 /***** schedule *****/
-
-#schedule-banner  {
-  background:
-    linear-gradient(to right,
-    rgba(215,65,167,.88),
-    rgba(230,250,48,.88)
-    ),
-    url("../img/schedule-banner.jpg");
+#schedule-banner {
+  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/schedule-banner.jpg");
   background-size: cover;
   margin: 0 auto;
   height: 15em;
@@ -439,7 +388,6 @@ header img {
 .feature img {
   float: right;
   display: block;
-
 }
 
 .feature h3 {
@@ -452,7 +400,7 @@ header img {
   float: left;
   text-align: left;
   margin-top: -27.5px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 .description p {
@@ -498,7 +446,6 @@ button.accordion span {
 
 #white {
   background-color: white;
-
 }
 
 #white:hover {
@@ -517,7 +464,8 @@ button.accordion.is-open:after {
   content: '\f139';
 }
 
-button.accordion:hover, button.accordion.is-open {
+button.accordion.is-open,
+button.accordion:hover {
   background-color: #E5E5E5;
 }
 
@@ -547,7 +495,7 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 .row-1-pink p {
-  float:left;
+  float: left;
   background-color: #f7e9f3;
   padding: 10px 0 10px 10px;
   width: 45%;
@@ -555,7 +503,7 @@ button.accordion:hover, button.accordion.is-open {
   line-height: 10px;
 }
 
-#place{
+#place {
   float: right;
 }
 
@@ -570,16 +518,9 @@ button.accordion:hover, button.accordion.is-open {
   background-color: #f7e9f3;
   padding: 5px 10px;
 }
-
 /***** contact *****/
-
-#contact-banner  {
-  background:
-    linear-gradient(to right,
-    rgba(215,65,167,.88),
-    rgba(230,250,48,.88)
-    ),
-    url("../img/contact-banner.png") no-repeat center center;
+#contact-banner {
+  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/contact-banner.png") no-repeat center center;
   background-size: cover;
   height: 15em;
 }
@@ -593,7 +534,7 @@ button.accordion:hover, button.accordion.is-open {
 }
 
 #contact-p h2 {
-  padding: 10px 0px 0px 0;
+  padding: 10px 0 0;
   line-height: 0;
 }
 
@@ -619,43 +560,36 @@ button.accordion:hover, button.accordion.is-open {
   background: #e8f46d;
   text-decoration: none;
 }
-
 /***** faq *****/
-
-#faq-banner  {
-  background:
-    linear-gradient(to right,
-    rgba(215,65,167,.88),
-    rgba(230,250,48,.88)
-    ),
-    url("../img/faq-banner.png") no-repeat center center;
+#faq-banner {
+  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/faq-banner.png") no-repeat center center;
   background-size: cover;
   margin: 0 auto;
   height: 15em;
 }
 
 .faq img {
-  padding: 10% 0 5% 0;
+  padding: 10% 0 5%;
   margin: 0 auto;
   width: 99%;
 }
 
 .faq {
-  padding: 0% 8% 0;
+  padding: 0 8%;
   margin: 0 auto;
 }
 
 .faq a {
   color: #3C2970;
   font-weight: 600;
-
 }
 
-.faq p, .faq li {
+.faq li,
+.faq p {
   text-align: left;
-  padding: 0 0 20px 0;
+  padding: 0 0 20px;
   margin: 0 auto;
-  font-size: .9em;
+  font-size: 0.9em;
   line-height: 1.5em;
   border-bottom: 1px solid #D741A7;
 }
@@ -670,18 +604,16 @@ button.accordion:hover, button.accordion.is-open {
   padding-bottom: 20%;
 }
 
-.faq ol{
+.faq ol {
   border: 0;
   list-style-position: none;
-  padding-left:inherit;
+  padding-left: inherit;
 }
-
 /***** footer *****/
-
 footer {
   background: #3d3d3d;
   height: 150px;
-  padding: 20px 0 25px 0;
+  padding: 20px 0 25px;
 }
 
 #contact p {
@@ -714,25 +646,15 @@ p #imprint {
   margin: 0 auto;
   padding: 15px 0;
 }
-
-
-
-
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers
  */
-
 .hidden {
-    display: none !important;
+  display: none !important;
 }
-
 /*
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -741,44 +663,39 @@ p #imprint {
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */
 }
-
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
 }
-
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
-
 /*
  * Clearfix: contain floats
  *
@@ -790,113 +707,103 @@ p #imprint {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  header img {
+    width: 30%;
+  }
 
-   /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
-
-
- }
-
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
-
-   header img {
-     width: 30%;
-   }
-   .menu {
+  .menu {
     width: 6%;
   }
 
-   #map {
-     padding: 20px 100px;
-     margin: 0 auto;
-   }
+  #map {
+    padding: 20px 100px;
+    margin: 0 auto;
+  }
 
-   #contact-p {
-        text-align: center;
-        padding: 20px;
-      }
+  #contact-p {
+    text-align: center;
+    padding: 20px;
+  }
 
-   #contact-p p, #contact-p h2 {
-         text-align: center;
-       }
+  #contact-p h2,
+  #contact-p p {
+    text-align: center;
+  }
 
-.faq ol {
+  .faq ol {
     padding-left: inherit;
     margin-left: 330px;
+  }
 }
+/* Medium devices (landscape tablets, 768px and below) */
+@media only screen and (max-width: 768px) {
+  .menu {
+    display: block;
+    float: left;
+    height: 40px;
+    background: url("../img/burger-icon.png") no-repeat 98% center;
+  }
 
- }
+  .nav-list {
+    overflow: hidden;
+    background: #d741a7;
+    height: 0;
+  }
 
- /* Medium devices (landscape tablets, 768px and below) */
- @media only screen and (max-width: 768px) {
+  .nav-list.open {
+    height: auto;
+    clear: both;
+    background: #d741a7;
+  }
 
-   .menu {
-     display: block;
-     float: left;
-     height: 40px;
-     background: url(../img/burger-icon.png) no-repeat 98% center;
-   }
+  .nav-list li {
+    float: none;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    background: #d741a7;
+  }
 
-   .nav-list {
-     overflow: hidden;
-     background: #d741a7;
-     height: 0;
-   }
+  .nav-list a {
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+    margin: 0;
+  }
 
-   .nav-list.open {
-     height: auto;
-     clear:both;
-     background: #d741a7;
-   }
+  .description {
+    float: left;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header img {
+    width: 30%;
+  }
 
-   .nav-list li {
-     float: none;
-     text-align: left;
-     width: 100%;
-     margin: 0;
-     background: #d741a7;
-   }
-
-   .nav-list a {
-     color: #ffffff;
-     padding: 10px;
-     display: block;
-     margin: 0;
-   }
-
-   .description {
-     float: left;
-   }
-
-
- }
-
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
-
-   header img {
-     width: 30%;
-   }
-   #introduction, #newsletter {
-     padding: 40px 100px;
-
+  #introduction,
+  #newsletter {
+    padding: 40px 100px;
   }
 
   .faq ol {
@@ -910,8 +817,7 @@ p #imprint {
 
   .logo {
     float: left;
-    padding: 7px 0px 0px 10px;
-
+    padding: 7px 0 0 10px;
   }
 
   .language {
@@ -927,24 +833,22 @@ p #imprint {
     width: 80%;
     margin: 0 auto;
     height: 12em;
-
   }
 
   .feature #f-image {
-   float: left;
-   max-width: 70%;
+    float: left;
+    max-width: 70%;
   }
 
-.feature img {
-   width: 100%;
+  .feature img {
+    width: 100%;
   }
 
- #f-title {
-   float: left;
-   padding-left: 20px;
-   width: 30%
-
- }
+  #f-title {
+    float: left;
+    padding-left: 20px;
+    width: 30%;
+  }
 
   .feature h3 {
     font-size: 1em;
@@ -953,7 +857,7 @@ p #imprint {
     padding: 8px 20px;
     color: #ffffff;
     text-align: left;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     margin: 0 auto;
   }
 
@@ -964,242 +868,230 @@ p #imprint {
     width: 40%;
     float: left;
   }
- }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header img {
+    width: 25%;
+  }
 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
-   header img {
-     width: 25%;
-   }
+  .feature {
+    margin: 0 auto;
+    height: 20em;
+    max-width: 70%;
+  }
 
-   .feature {
-     margin: 0 auto;
-     height: 20em;
-     max-width: 70%;
-   }
-
-   #f-image {
+  #f-image {
     float: left;
     display: inline;
     width: 40%;
-   }
+  }
 
-.feature img {
+  .feature img {
     width: 100%;
-   }
+  }
 
   #f-title {
     float: left;
     padding-left: 40px;
     width: 50%;
-
   }
 
-   .feature h3 {
-     font-size: 1em;
-     font-weight: 400;
-     background-color: #D741A7;
-     padding: 8px 20px;
-     color: #ffffff;
-     text-align: left;
-     letter-spacing: .05em;
-     margin: 0 auto;
-   }
+  .feature h3 {
+    font-size: 1em;
+    font-weight: 400;
+    background-color: #D741A7;
+    padding: 8px 20px;
+    color: #ffffff;
+    text-align: left;
+    letter-spacing: 0.05em;
+    margin: 0 auto;
+  }
 
-   .description {
-     color: inherit;
-     text-align: left;
-     padding-left: 40px;
-     width: 35%;
-     float: left;
-   }
+  .description {
+    color: inherit;
+    text-align: left;
+    padding-left: 40px;
+    width: 35%;
+    float: left;
+  }
 
-   .container {
-     width: 70%;
-     margin: 0 auto;
-   }
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
 
-   button.accordion {
-     font-size: 1.5em;
-   }
+  button.accordion {
+    font-size: 1.5em;
+  }
 
-   button.accordion span {
-     font-size: .8em;
-   }
+  button.accordion span {
+    font-size: 0.8em;
+  }
 
-   .event {
-     font-size: 1em;
-   }
+  .event {
+    font-size: 1em;
+  }
 
-  .row-1 p, .row-1-pink p {
-     margin-bottom: 10px;
-     width: 48.5%;
-     padding: 15px 0 10px 10px;
-   }
+  .row-1 p,
+  .row-1-pink p {
+    margin-bottom: 10px;
+    width: 48.5%;
+    padding: 15px 0 10px 10px;
+  }
 
-   footer {
-     clear: both;
-   }
+  footer {
+    clear: both;
+  }
 
-   .description p {
-     padding: 0;
-   }
+  .description p {
+    padding: 0;
+  }
 
-   .faq img {
-     padding: 2% 2% 0 0;
-     float: left;
-   }
+  .faq img {
+    padding: 2% 2% 0 0;
+    float: left;
+  }
 
-#contact-p {
-     text-align: center;
-     padding: 20px;
-   }
+  #contact-p {
+    text-align: center;
+    padding: 20px;
+  }
 
-#contact-p p, #contact-p h2 {
-      text-align: center;
-    }
+  #contact-p h2,
+  #contact-p p {
+    text-align: center;
+  }
 
-.faq p, .faq h2 {
-  border: 0;
-  padding: 0;
+  .faq h2,
+  .faq p {
+    border: 0;
+    padding: 0;
+  }
+
+  .faq ol {
+    padding-left: inherit;
+    margin-left: 490px;
+  }
+
+  .faq {
+    padding-top: 3%;
+  }
+
+  .faq img {
+    padding-top: 0;
+    width: 40%;
+  }
+
+  .faq #img-left {
+    clear: both;
+    padding-top: 20px;
+  }
 }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  header img {
+    width: 25%;
+  }
 
-.faq ol {
-  padding-left: inherit;
-      margin-left: 490px;
+  .faq h2,
+  .faq p {
+    border: 0;
+    padding: 0;
+  }
+
+  .faq ol {
+    padding-left: inherit;
+    margin-left: 330px;
+  }
+
+  .faq {
+    padding-top: 3%;
+  }
+
+  .faq img {
+    padding-top: 0;
+    width: 30%;
+  }
+
+  .faq #img-left {
+    clear: both;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
 }
-
-.faq {
-  padding-top: 3%;
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
-
-.faq img {
-  padding-top: 0;
-  width: 40%;
-}
-
-.faq #img-left {
-  clear:both;
-  padding-top: 20px;
-}
-
-
- }
-
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
-
-   header img {
-     width: 25%;
-   }
-
-   .faq p, .faq h2 {
-     border: 0;
-     padding: 0;
-   }
-
-   .faq ol {
-     padding-left: inherit;
-     margin-left: 330px;
-   }
-
-   .faq {
-     padding-top: 3%;
-   }
-
-   .faq img {
-     padding-top: 0;
-     width: 30%;
-   }
-
-   .faq #img-left {
-     clear:both;
-     padding-top: 20px;
-     padding-bottom: 40px;
-   }
-
-
- }
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  *,
+  *:after,
+  *:before {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+  pre {
+    white-space: pre-wrap !important;
+  }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
+  blockquote,
+  pre {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
+  thead {
+    display: table-header-group;
+  }
 
-    thead {
-        display: table-header-group;
-    }
+  img,
+  tr {
+    page-break-inside: avoid;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
