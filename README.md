@@ -1,7 +1,12 @@
 ## Requirements
+
+### for Mac
 * You need a version of the Ruby programming language on your computer to do this, its installed on every Mac by default.
 * You will need to install the xcode command line tools with `xcode-select --install`
 * The site is generated with a static site generator. To install it type `gem install bundler jekyll`.
+
+### for Windows
+* Read instructions here: https://jekyllrb.com/docs/windows/
 
 
 ## Usage
