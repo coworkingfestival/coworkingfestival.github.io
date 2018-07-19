@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="de">
 
 <head>
   <meta charset="utf-8">
@@ -14,7 +14,6 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Monoton|Mukta+Vaani:200,400,600" rel="stylesheet">
 </head>
@@ -22,25 +21,25 @@
 <body>
   <header >
     <nav class="navigation" id="myHeader">
-      <a class="menu"></a>
+      <a class="menu-toggle"></a>
       <a href="index.html" class="logo">
         <h1>Cowork</h1>
       </a>
-      <div class="language">
-        <a href="/index.html">EN</a>
-        &emsp;&emsp;&mid;&emsp;&emsp;
-        <a href="/index-de.html">DE</a>
-      </div>
       <ul class="nav-list">
         <li><a href="./schedule-de.html">Programm</a></li>
         <li><a href="./tours.html">Touren</a></li>
         <li><a href="./faq.html">faq</a></li>
         <li><a href="./contact.html">Kontakt</a></li>
       </ul>
+      <div class="language">
+        <a href="/index.html">EN</a>
+        &mid;
+        <a href="/index-de.html">DE</a>
+      </div>
     </nav>
     <div class="homepage" id="{{page.banner}}">
       {% unless page.banner %}
-        <img src="img/logo-lockup-p.svg" />
+        <img src="img/logo-lockup-p.svg" class="main-header-graphic" />
       {% endunless %}
 
       {% if page.title %}

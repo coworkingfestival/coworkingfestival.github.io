@@ -1,88 +1,19 @@
-/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 html {
-  color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
 ::-moz-selection {
-  background: #b3d4fc;
+  background: $color-pink;
+  text-shadow: none;
+}
+::selection {
+  background: $color-pink;
   text-shadow: none;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-/*
- * A better looking default horizontal rule
- */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-/*
- * Remove default fieldset styles.
- */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-/*
- * Allow only vertical resizing of textareas.
- */
-textarea {
-  resize: vertical;
-}
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 body {
   font-family: 'Mukta+Vaani', sans-serif;
-  color: #3d3d3d;
+  color: $color-text;
   font-size: 16px;
   text-align: center;
   font-weight: 400;
@@ -109,7 +40,7 @@ a {
 
 .title {
   font-family: "Monoton", sans-serif;
-  color: #ffffff;
+  color: $color-white;
   font-size: 3em;
   font-weight: lighter;
   text-align: center;
@@ -141,11 +72,11 @@ a {
 }
 /***** HEADER *****/
 header {
-  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) );
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) );
 }
 
 .homepage {
-  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/hero.jpg");
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/hero.jpg");
   background-size: auto;
   margin: 0 auto;
 }
@@ -154,24 +85,34 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #d741a7;
+  background: $color-pink;
 }
 
 .sticky + .content {
   padding-top: 102px;
 }
 
-.menu {
-  width: 10%;
-}
-
 .navigation {
-  transition: all 0.5s ease;
   height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: all 0.5s ease;
 }
 
-.navigation > * {
-  border: 1px dotted red;
+.menu-toggle {
+  display: none;
+  width: 20px;
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background: url("../img/burger-icon.png") no-repeat 98% center;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
 }
 
 .nav-list {
@@ -179,84 +120,76 @@ header {
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
-
-.nav-list li {
-  float: left;
-}
-
-.nav-list a {
-  display: block;
-  text-align: center;
-  padding: 6px 16px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
-  color: #3a1772;
+  display: flex;
+  align-items: center;
+  a {
+    display: block;
+    text-align: center;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-purple;
+  }
 }
 
 header h3 {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
-  color: #3a1772;
-}
-
-header a {
-  text-transform: uppercase;
-  text-decoration: none;
+  color: $color-purple;
 }
 
 .language {
-  color: #3d3d3d;
+  color: $color-text;
   font-weight: 600;
-  float: right;
-  margin: 3px 0 0;
-  padding: 0 10px 0 0;
-}
-
-.language a {
-  color: #3D3D3D;
+  a {
+    color: #3D3D3D;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+  }
 }
 
 .logo {
-  display: inline-block;
+  display: block;
+  padding: 10px;
+  h1 {
+    font-family: "Monoton", sans-serif;
+    color: $color-purple;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+  }
 }
 
-.logo h1 {
-  font-family: "Monoton", sans-serif;
-  color: #3a1772;
-  font-weight: lighter;
-  text-align: center;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  font-size: 1.2em;
-}
-
-header img {
+.main-header-graphic {
   width: 55%;
   margin: 0 auto;
   display: block;
   clear: both;
   padding: 20px;
 }
+
 /***** INTRODUCTION *****/
 #introduction h2 {
   text-align: center;
-  color: #d741a7;
+  color: $color-pink;
   font-size: 26px;
   line-height: 30px;
 }
 /***** newsletter *****/
 #newsletter {
-  background: #d741a7;
+  background: $color-pink;
   padding: 20px 0 25px;
 }
 
 #newsletter h2 {
   font-family: "Monoton", sans-serif;
-  color: #ffffff;
+  color: $color-white;
   font-size: 26px;
   font-weight: lighter;
   word-spacing: 10px;
@@ -264,7 +197,7 @@ header img {
 }
 
 #newsletter p {
-  color: #ffffff;
+  color: $color-white;
 }
 
 #newsletter span {
@@ -272,7 +205,7 @@ header img {
 }
 
 #newsletter span a {
-  color: #e6fa30;
+  color: $color-lemon;
 }
 
 #newsletter .btn,
@@ -281,10 +214,10 @@ header img {
   -moz-border-radius: 0;
   border-radius: 5px;
   border: 0;
-  color: #3a1772;
+  color: $color-purple;
   font-family: 'Mukta+Vaani', sans-serif;
   font-size: 16px;
-  background: #e6fa30;
+  background: $color-lemon;
   padding: 15px 40px;
   text-decoration: none;
   text-transform: uppercase;
@@ -301,7 +234,7 @@ header img {
 }
 /***** tours *****/
 #tours-banner {
-  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/tours.jpg");
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/tours.jpg");
   background-size: cover;
   margin: 0 auto;
   height: 15em;
@@ -344,7 +277,7 @@ header img {
 }
 
 .tours h3 {
-  color: #D741A7;
+  color: $color-pink;
   font-weight: 600;
   text-align: left;
   font-size: 1em;
@@ -369,11 +302,11 @@ header img {
 }
 
 #tour-start-end a:hover {
-  color: #D741A7;
+  color: $color-pink;
 }
 /***** schedule *****/
 #schedule-banner {
-  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/schedule-banner.jpg");
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/schedule-banner.jpg");
   background-size: cover;
   margin: 0 auto;
   height: 15em;
@@ -393,10 +326,10 @@ header img {
 .feature h3 {
   font-size: 1em;
   font-weight: 400;
-  background-color: #D741A7;
+  background-color: $color-pink;
   padding: 3px 20px;
   width: 70%;
-  color: #ffffff;
+  color: $color-white;
   float: left;
   text-align: left;
   margin-top: -27.5px;
@@ -429,7 +362,7 @@ button.accordion {
   cursor: pointer;
   transition: background-color 0.2s linear;
   font-family: "Monoton", sans-serif;
-  color: #D741A7;
+  color: $color-pink;
   font-size: 1em;
   font-weight: lighter;
   letter-spacing: 1px;
@@ -439,13 +372,13 @@ button.accordion {
 
 button.accordion span {
   font-family: 'Mukta+Vaani', sans-serif;
-  color: #3d3d3d;
+  color: $color-text;
   font-weight: 400;
   text-transform: capitalize;
 }
 
 #white {
-  background-color: white;
+  background-color: $color-white;
 }
 
 #white:hover {
@@ -520,7 +453,7 @@ button.accordion:hover {
 }
 /***** contact *****/
 #contact-banner {
-  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/contact-banner.png") no-repeat center center;
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/contact-banner.png") no-repeat center center;
   background-size: cover;
   height: 15em;
 }
@@ -546,7 +479,7 @@ button.accordion:hover {
 
 .contact h2 {
   font-family: "Monoton", sans-serif;
-  color: #D741A7;
+  color: $color-pink;
   font-size: 26px;
   font-weight: lighter;
   word-spacing: 10px;
@@ -562,7 +495,7 @@ button.accordion:hover {
 }
 /***** faq *****/
 #faq-banner {
-  background: linear-gradient(to right, rgba(215,65,167,.88), rgba(230,250,48,.88) ), url("../img/faq-banner.png") no-repeat center center;
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/faq-banner.png") no-repeat center center;
   background-size: cover;
   margin: 0 auto;
   height: 15em;
@@ -591,7 +524,7 @@ button.accordion:hover {
   margin: 0 auto;
   font-size: 0.9em;
   line-height: 1.5em;
-  border-bottom: 1px solid #D741A7;
+  border-bottom: 1px solid $color-pink;
 }
 
 .faq li {
@@ -611,13 +544,13 @@ button.accordion:hover {
 }
 /***** footer *****/
 footer {
-  background: #3d3d3d;
+  background: $color-text;
   height: 150px;
   padding: 20px 0 25px;
 }
 
 #contact p {
-  color: #ffffff;
+  color: $color-white;
   text-align: left;
 }
 
@@ -627,7 +560,7 @@ footer {
 
 #contact a {
   text-decoration: none;
-  color: #e6fa30;
+  color: $color-lemon;
 }
 
 #right-pad {
@@ -723,16 +656,11 @@ p #imprint {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  header img {
+  .main-header-graphic {
     width: 30%;
-  }
-
-  .menu {
-    width: 6%;
   }
 
   #map {
@@ -757,35 +685,35 @@ p #imprint {
 }
 /* Medium devices (landscape tablets, 768px and below) */
 @media only screen and (max-width: 768px) {
-  .menu {
+  .menu-toggle {
     display: block;
-    float: left;
-    height: 40px;
-    background: url("../img/burger-icon.png") no-repeat 98% center;
   }
 
   .nav-list {
-    overflow: hidden;
-    background: #d741a7;
-    height: 0;
+    background: $color-pink;
+    display: none;
   }
 
   .nav-list.open {
-    height: auto;
-    clear: both;
-    background: #d741a7;
+    display: block;
+    background-color: $color-pink;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .nav-list li {
-    float: none;
     text-align: left;
     width: 100%;
     margin: 0;
-    background: #d741a7;
   }
 
   .nav-list a {
-    color: #ffffff;
+    color: $color-white;
     padding: 10px;
     display: block;
     margin: 0;
@@ -797,7 +725,7 @@ p #imprint {
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  header img {
+  .main-header-graphic {
     width: 30%;
   }
 
@@ -809,19 +737,6 @@ p #imprint {
   .faq ol {
     padding-left: inherit;
     margin-left: 330px;
-  }
-
-  .nav-list {
-    float: right;
-  }
-
-  .logo {
-    float: left;
-    padding: 7px 0 0 10px;
-  }
-
-  .language {
-    float: right;
   }
 
   #map {
@@ -853,9 +768,9 @@ p #imprint {
   .feature h3 {
     font-size: 1em;
     font-weight: 400;
-    background-color: #D741A7;
+    background-color: $color-pink;
     padding: 8px 20px;
-    color: #ffffff;
+    color: $color-white;
     text-align: left;
     letter-spacing: 0.05em;
     margin: 0 auto;
@@ -871,7 +786,7 @@ p #imprint {
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  header img {
+  .main-header-graphic {
     width: 25%;
   }
 
@@ -900,9 +815,9 @@ p #imprint {
   .feature h3 {
     font-size: 1em;
     font-weight: 400;
-    background-color: #D741A7;
+    background-color: $color-pink;
     padding: 8px 20px;
-    color: #ffffff;
+    color: $color-white;
     text-align: left;
     letter-spacing: 0.05em;
     margin: 0 auto;
@@ -990,7 +905,7 @@ p #imprint {
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  header img {
+  .main-header-graphic {
     width: 25%;
   }
 
@@ -1018,80 +933,5 @@ p #imprint {
     clear: both;
     padding-top: 20px;
     padding-bottom: 40px;
-  }
-}
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-@media print {
-  *,
-  *:after,
-  *:before {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster */
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  blockquote,
-  pre {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  thead {
-    display: table-header-group;
-  }
-
-  img,
-  tr {
-    page-break-inside: avoid;
-  }
-
-  h2,
-  h3,
-  p {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
   }
 }
