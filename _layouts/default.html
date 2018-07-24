@@ -1,71 +1,48 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Coworking Festival 2018</title>
-  <meta name="description" content="The festival event at the end of summer in Berlin about the new way of work, coworking, better freelancing and self-determined work">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% include head.html %}
 
-  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <body class="site-body">
+    <header>
+      <nav class="navigation" id="myHeader">
+        <a class="menu-toggle"></a>
+        <a href="index.html" class="logo">
+          <h1>Cowork</h1>
+        </a>
+        <div class="nav-group">
+          <ul class="nav-list">
+            <li><a href="./schedule.html">Schedule</a></li>
+            <li><a href="./tours.html">Tours</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          {% include language-switch.html %}
+        </div>
+      </nav>
+      <div class="homepage" id="{{page.banner}}">
+        {% unless page.banner %}
+        <img src="img/logo-lockup-p.svg" class="main-header-graphic" /> {% endunless %} {% if page.title %}
+        <h1 class="title">{{page.title}}</h1> {% endif %}
+      </div>
+    </header>
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <main class="site-main">
+      {{content}}
+    </main>
 
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Monoton|Mukta+Vaani:200,400,600" rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <nav class="navigation" id="myHeader">
-      <a class="menu-toggle"></a>
-      <a href="index.html" class="logo">
-        <h1>Cowork</h1>
-      </a>
-      <div class="nav-group">
-        <ul class="nav-list">
-          <li><a href="./schedule.html">Schedule</a></li>
-          <li><a href="./tours.html">Tours</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-        <div class="language">
-          <a href="/index.html">EN</a>
-          &mid;
-          <a href="/index-de.html">DE</a>
+    <footer id="contact">
+      <div class="full-width">
+        <div class="half-width">
+          <p><span>Get in touch</span><br /><a href="mailto:berlincoworking@gmail.com" target="_blank">berlincoworking@gmail.com</a></p>
+          <p><a href="/imprint.html" id="imprint" target="_blank">Imprint</a></p>
+        </div>
+        <div class="half-width" id="social-media">
+          {% include social-links.html %}
         </div>
       </div>
-    </nav>
-    <div class="homepage" id="{{page.banner}}">
-      {% unless page.banner %}
-      <img src="img/logo-lockup-p.svg" class="main-header-graphic" /> {% endunless %} {% if page.title %}
-      <h1 class="title">{{page.title}}</h1> {% endif %}
-    </div>
-  </header>
-
-
-  <main>
-    {{content}}
-  </main>
-
-  <footer id="contact">
-    <div class="full-width">
-      <div class="half-width">
-        <p><span>Get in touch</span><br /><a href="mailto:berlincoworking@gmail.com" target="_blank">berlincoworking@gmail.com</a></p>
-        <p><a href="/imprint.html" id="imprint" target="_blank">Imprint</a></p>
-      </div>
-      <div class="half-width" id="social-media">
-        <p>
-          <a href="https://twitter.com/berlincoworking" target="_blank"><img id="right-pad" src="img/twitter.svg" alt="twitter" height="30px" width="30px" /></a>
-          <a href="https://www.facebook.com/berlincoworking/" target="_blank"><img src="img/facebook.svg" alt="facebook" height="30px" width="30px" /></a>
-        </p>
-      </div>
-    </div>
-  </footer>
-  {% include scripts.html %}
-</body>
+    </footer>
+    {% include scripts.html %}
+  </body>
 
 </html>

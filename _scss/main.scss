@@ -56,6 +56,18 @@ a, button, input, textarea, select {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+// Layout
+
+.site-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site-main {
+  flex-grow: 1;
+}
+
 /***** GRID *****/
 .full-width {
   width: 100%;
