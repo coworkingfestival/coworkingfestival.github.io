@@ -7,105 +7,54 @@
   height: 15em;
 }
 
-.faq img {
-  padding: 10% 0 5%;
-  margin: 2rem auto 2rem;
-  width: 99%;
-}
-
 .faq {
-  padding: 0 8%;
-  margin: 0 auto;
-}
-
-.faq a {
-  color: #3C2970;
-  font-weight: 600;
-}
-
-.faq li,
-.faq p {
+  padding: 1.5rem 0;
+  margin: 1rem 8%;
   text-align: left;
-  padding: 0 0 20px;
-  margin: 0 auto;
-  font-size: 0.9em;
-  line-height: 1.5em;
-  border-bottom: 1px solid $color-pink;
-  overflow: hidden;
-}
-
-.faq li {
-  border: 0;
-  padding: 0;
-}
-
-.faq #no-border {
-  border: 0;
-  padding-bottom: 20%;
-}
-
-.faq ol {
-  border: 0;
-  list-style-position: none;
-  padding-left: inherit;
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .faq ol {
-    padding-left: inherit;
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto 1.5rem;
   }
-
-  .faq img {
-    padding: 2% 2% 0 0;
-    float: left;
+  a {
+    color: #3C2970;
+    font-weight: 600;
+  }
+  p {
+    max-width: 42rem;
+    padding: 0 0 20px;
+    font-size: 0.9em;
+    overflow: hidden;
+    border-bottom: 1px solid $color-pink;
   }
 }
 
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .faq h2,
-  .faq p {
-    border: 0;
-    padding: 0;
-  }
-
+/* Medium devices (landscape tablets, 768px and above) */
+@media only screen and (min-width: 768px) {
   .faq {
-    padding-top: 3%;
+    img {
+      width: 40%;
+      margin-right: 2rem;
+      margin-bottom: 6rem;
+      float: left;
+      clear: left;
+    }
   }
-
-  .faq img {
-    padding-top: 0;
-    width: 40%;
-  }
-
-  .faq #img-left {
-    clear: both;
-    padding-top: 20px;
+  .faq-body {
+    margin-left: calc(40% + 2rem);
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .faq h2,
-  .faq p {
-    border: 0;
-    padding: 0;
-  }
-
   .faq {
-    padding-top: 3%;
-  }
-
-  .faq img {
-    padding-top: 0;
-    width: 30%;
-  }
-
-  .faq #img-left {
-    clear: both;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    img {
+      width: 30%;
+      max-width: 420px;
+    }
+    .faq-body {
+      margin-left: calc(30% + 2rem);
+    }
   }
 }
