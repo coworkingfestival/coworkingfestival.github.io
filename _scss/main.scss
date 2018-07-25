@@ -236,9 +236,6 @@ header h3 {
   span {
     font-weight: 600;
   }
-  a {
-    color: $color-lemon;
-  }
 }
 
 // Buttons
@@ -249,7 +246,7 @@ header h3 {
   color: $color-purple;
   font-size: 16px;
   background-color: $color-lemon;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: .05em;
