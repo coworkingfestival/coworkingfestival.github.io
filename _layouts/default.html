@@ -33,15 +33,17 @@
 
     {% include sponsor-footer.html %}
 
-    <footer id="contact">
-      <div class="full-width">
-        <div class="half-width">
-          <p><span>Get in touch</span><br /><a href="mailto:berlincoworking@gmail.com" target="_blank">berlincoworking@gmail.com</a></p>
-          <p><a href="/imprint.html" id="imprint" target="_blank">Imprint</a></p>
-        </div>
-        <div class="half-width" id="social-media">
-          {% include social-links.html %}
-        </div>
+    <footer class="footer flex justify-between items-center tl pv4 ph3 ph4-l">
+      <div>
+        <p>
+          <span>Get in touch</span><br /><a href="mailto:berlincoworking@gmail.com" target="_blank">berlincoworking@gmail.com</a>
+        </p>
+        <p>
+          <a href="/imprint.html" id="imprint" target="_blank">Imprint</a>
+        </p>
+      </div>
+      <div>
+        {% include social-links.html %}
       </div>
     </footer>
     {% include scripts.html %}
