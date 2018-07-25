@@ -8,30 +8,21 @@
 }
 
 .faq {
-  padding: 1.5rem 0;
-  margin: 1rem 8%;
-  text-align: left;
+  padding-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   img {
     display: block;
     width: 100%;
     margin: 0 auto 1.5rem;
   }
-  a {
-    color: #3C2970;
-    font-weight: 600;
-  }
   p {
-    max-width: 42rem;
-    padding: 0 0 20px;
-    font-size: 0.9em;
-    overflow: hidden;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid $color-pink;
   }
 }
 
-
-/* Medium devices (landscape tablets, 768px and above) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 540px) {
   .faq {
     img {
       width: 40%;
@@ -43,18 +34,5 @@
   }
   .faq-body {
     margin-left: calc(40% + 2rem);
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .faq {
-    img {
-      width: 30%;
-      max-width: 420px;
-    }
-    .faq-body {
-      margin-left: calc(30% + 2rem);
-    }
   }
 }

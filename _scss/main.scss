@@ -268,12 +268,7 @@ header h3 {
 
 .tours {
   padding: 10% 8%;
-  height: 220px;
-}
-
-#tours-gray {
   background: #EFEFEC;
-  height: 220px;
 }
 
 #googlemap {
@@ -371,6 +366,11 @@ header h3 {
   padding-left: 1rem;
 }
 
+
+.container-wide {
+  max-width: 64rem;
+}
+
 .drop-down {
   margin-bottom: 50px;
 }
@@ -403,7 +403,6 @@ header h3 {
   font-size: 26px;
   margin: 0 auto;
   padding-top: 20px;
-  text-align: center;
 }
 
 /***** footer *****/
