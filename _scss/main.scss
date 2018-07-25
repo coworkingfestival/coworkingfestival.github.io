@@ -29,6 +29,13 @@ a {
   }
 }
 
+.yellow-link {
+  color: $color-lemon;
+  &:hover, &:focus {
+    color: $color-purple;
+  }
+}
+
 .introduction,
 .newsletter {
   padding-top: 3rem;
@@ -237,24 +244,22 @@ header h3 {
   color: $color-lemon;
 }
 
-.newsletter .btn,
-.contact .btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
+.btn {
+  display: inline-block;
   border-radius: 5px;
   border: 0;
   color: $color-purple;
   font-size: 16px;
-  background: $color-lemon;
-  padding: 15px 40px;
+  background-color: $color-lemon;
+  padding: 1rem 2.5rem;
   text-decoration: none;
   text-transform: uppercase;
-  margin: 50px 0;
-}
-
-.newsletter .btn:hover {
-  background: #e8f46d;
-  text-decoration: none;
+  letter-spacing: .05em;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  &:hover, &:focus {
+    background-color: darken($color-lemon, 20%);
+  }
 }
 
 /***** tours *****/
