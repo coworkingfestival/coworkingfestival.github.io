@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="de">
 
 <head>
   <meta charset="utf-8">
@@ -14,33 +14,34 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Monoton|Mukta+Vaani:200,400,600" rel="stylesheet">
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <!-- Add your site or application content here -->
-
   <header >
-    <nav class="header" id="myHeader">
-      <a class="menu"></a>
-      <a href="index-de.html"><h1 class="logo">cowork</h1></a>
-      <p class="language"><a href="/index.html">EN</a>&emsp;&emsp;&mid;&emsp;&emsp;<a href="/index-de.html">DE</a></p>
-      <!-- <ul>
-        <li><a href="./schedule.html">schedule</a></li>
-        <li><a href="./tours.html">tours</a></li>
-        <li><a href="./faq.html">faq</a></li>
-        <li><a href="./contact.html">contact</a></li>
-      </ul> -->
+    <nav class="navigation" id="myHeader">
+      <a class="menu-toggle"></a>
+      <a href="./index-de.html" class="logo">
+        <h1>Cowork</h1>
+      </a>
+      <div class="nav-group">
+        <ul class="nav-list">
+          <li><a href="./schedule-de.html">Programm</a></li>
+          <li><a href="./tours-de.html">Touren</a></li>
+          <li><a href="./faq-de.html">faq</a></li>
+          <li><a href="./contact-de.html">Kontakt</a></li>
+        </ul>
+        <div class="language">
+          <a href="/index.html">EN</a>
+          &mid;
+          <a href="/index-de.html">DE</a>
+        </div>
+      </div>
     </nav>
     <div class="homepage" id="{{page.banner}}">
       {% unless page.banner %}
-        <img src="img/logo-lockup-p.svg" />
+        <img src="img/logo-lockup-p.svg" class="main-header-graphic" />
       {% endunless %}
 
       {% if page.title %}
@@ -67,20 +68,7 @@
       </div>
     </div>
   </footer>
-
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  {% include scripts.html %}
 </body>
 
 </html>

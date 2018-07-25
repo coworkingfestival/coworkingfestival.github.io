@@ -632,6 +632,7 @@ button.accordion:hover, button.accordion.is-open {
   padding: 10% 0 5% 0;
   margin: 0 auto;
   width: 99%;
+  clear:both;
 }
 
 .faq {
@@ -657,17 +658,20 @@ button.accordion:hover, button.accordion.is-open {
 .faq li {
   border: 0;
   padding: 0;
+  margin: 0 0 0 3%;
 }
 
 .faq #no-border {
   border: 0;
-  padding-bottom: 20%;
+  padding-bottom: 15%;
 }
 
 .faq ol{
   border: 0;
   list-style-position: none;
   padding-left:inherit;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #D741A7;
 }
 
 /***** footer *****/
@@ -833,7 +837,6 @@ p #imprint {
 
 .faq ol {
     padding-left: inherit;
-    margin-left: 330px;
 }
 
  }
@@ -903,7 +906,6 @@ p #imprint {
 
   .faq ol {
     padding-left: inherit;
-    margin-left: 330px;
   }
 
   nav {
@@ -1055,11 +1057,6 @@ p #imprint {
      padding: 0;
    }
 
-   .faq img {
-     padding: 2% 2% 0 0;
-     float: left;
-   }
-
 #contact-p {
      text-align: center;
      padding: 20px;
@@ -1074,9 +1071,19 @@ p #imprint {
   padding: 0;
 }
 
+.faq #no-border {
+    border: 0;
+    padding-bottom: 5%;
+}
+
 .faq ol {
   padding-left: inherit;
-      margin-left: 490px;
+  margin-left: 0;
+  border: 0;
+}
+
+.faq li {
+  margin: 0 0 0 41%;
 }
 
 .faq {
@@ -1084,13 +1091,15 @@ p #imprint {
 }
 
 .faq img {
-  padding-top: 0;
   width: 40%;
+  padding: 2% 2% 2% 0;
+  float: left;
 }
 
 .faq #img-left {
   clear:both;
   padding-top: 20px;
+  padding-bottom: 70px;
 }
 
 
@@ -1110,7 +1119,12 @@ p #imprint {
 
    .faq ol {
      padding-left: inherit;
-     margin-left: 330px;
+     margin-left: 290px;
+     border: 0;
+   }
+
+   .faq li {
+     margin: 0 0 0 10%;
    }
 
    .faq {
@@ -1125,7 +1139,7 @@ p #imprint {
    .faq #img-left {
      clear:both;
      padding-top: 20px;
-     padding-bottom: 40px;
+     padding-bottom: 60px;
    }
 
 

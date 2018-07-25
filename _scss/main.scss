@@ -1,0 +1,774 @@
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+::-moz-selection {
+  background: $color-pink;
+  text-shadow: none;
+}
+::selection {
+  background: $color-pink;
+  text-shadow: none;
+}
+
+body, input, button, textarea, select {
+  font-family: 'Mukta Vaani', sans-serif;
+}
+
+body {
+  color: $color-text;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#introduction,
+#newsletter {
+  height: 20%;
+  padding: 15px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  line-height: 28px;
+  padding: 0 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, button, input, textarea, select {
+  transition: all 0.25s ease;
+}
+
+.title {
+  font-family: "Monoton", sans-serif;
+  color: $color-white;
+  font-size: 3em;
+  font-weight: lighter;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 90px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/***** GRID *****/
+.full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.half-width {
+  float: left;
+  width: 50%;
+}
+
+.one-third-width {
+  width: 0.3333%;
+  float: left;
+  padding-right: 20px;
+}
+
+.two-third-width {
+  width: 0.666%;
+  float: right;
+}
+/***** HEADER *****/
+header {
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) );
+}
+
+.homepage {
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/hero.jpg");
+  background-size: auto;
+  margin: 0 auto;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $color-pink;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.navigation {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: all 0.25s ease;
+}
+
+.menu-toggle {
+  display: none;
+  width: 20px;
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background: url("../img/burger-icon.png") no-repeat 98% center;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  a {
+    display: block;
+    text-align: center;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-purple;
+  }
+}
+
+header h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-purple;
+}
+
+.language {
+  color: $color-text;
+  font-weight: 600;
+  a {
+    color: #3D3D3D;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+  }
+}
+
+.logo {
+  display: block;
+  padding: 10px;
+  h1 {
+    font-family: "Monoton", sans-serif;
+    color: $color-purple;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    font-size: 1.2em;
+  }
+}
+
+.main-header-graphic {
+  width: 55%;
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  padding: 20px;
+}
+
+/***** INTRODUCTION *****/
+#introduction h2 {
+  text-align: center;
+  color: $color-pink;
+  font-size: 26px;
+  line-height: 30px;
+}
+/***** newsletter *****/
+#newsletter {
+  background: $color-pink;
+  padding: 20px 0 25px;
+}
+
+#newsletter h2 {
+  font-family: "Monoton", sans-serif;
+  color: $color-white;
+  font-size: 26px;
+  font-weight: lighter;
+  word-spacing: 10px;
+  text-transform: uppercase;
+}
+
+#newsletter p {
+  color: $color-white;
+}
+
+#newsletter span {
+  font-weight: 600;
+}
+
+#newsletter span a {
+  color: $color-lemon;
+}
+
+#newsletter .btn,
+.contact .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 5px;
+  border: 0;
+  color: $color-purple;
+  font-size: 16px;
+  background: $color-lemon;
+  padding: 15px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
+
+#newsletter .btn:hover {
+  background: #e8f46d;
+  text-decoration: none;
+}
+
+#btn-padding {
+  padding: 8px 0;
+}
+/***** tours *****/
+#tours-banner {
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/tours.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  height: 15em;
+}
+
+.tours {
+  padding: 10% 8%;
+  height: 220px;
+}
+
+#tours-gray {
+  background: #EFEFEC;
+  height: 220px;
+}
+
+#map {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#googlemap {
+  border: 1px #BBB solid;
+}
+
+.time {
+  font-size: 0.8em;
+  color: #A5A5A3;
+  text-align: left;
+  padding: 0;
+  line-height: 0.4em;
+}
+
+.small-heading {
+  font-family: 'Mukta Vaani', sans-serif;
+  font-size: 1em;
+  text-align: left;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.tours h3 {
+  color: $color-pink;
+  font-weight: 600;
+  text-align: left;
+  font-size: 1em;
+}
+
+#tour-start-end p {
+  text-align: left;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+#tour-start-end p span {
+  font-weight: 600;
+  color: #A5A5A3;
+}
+
+#tour-start-end a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+#tour-start-end a:hover {
+  color: $color-pink;
+}
+/***** schedule *****/
+#schedule-banner {
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/schedule-banner.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  height: 15em;
+}
+
+.feature {
+  padding: 20px;
+  width: auto;
+  /* max-width: 50%; */
+}
+
+.feature img {
+  float: right;
+  display: block;
+}
+
+.feature h3 {
+  font-size: 1em;
+  font-weight: 400;
+  background-color: $color-pink;
+  padding: 3px 20px;
+  width: 70%;
+  color: $color-white;
+  float: left;
+  text-align: left;
+  margin-top: -27.5px;
+  letter-spacing: 0.05em;
+}
+
+.description p {
+  color: inherit;
+  text-align: left;
+  padding: inherit;
+  clear: both;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#drop-down {
+  margin-bottom: 50px;
+}
+
+button.accordion {
+  width: 100%;
+  background-color: #EFEFEC;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  font-family: "Monoton", sans-serif;
+  color: $color-pink;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+button.accordion span {
+  color: $color-text;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#white {
+  background-color: $color-white;
+}
+
+#white:hover {
+  background-color: #E5E5E5;
+}
+
+button.accordion:after {
+  content: '\f13a';
+  font-family: "fontawesome";
+  font-size: 1em;
+  font-weight: bolder;
+  float: right;
+}
+
+button.accordion.is-open:after {
+  content: '\f139';
+}
+
+button.accordion.is-open,
+button.accordion:hover {
+  background-color: #E5E5E5;
+}
+
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+/***** contact *****/
+#contact-banner {
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/contact-banner.png") no-repeat center center;
+  background-size: cover;
+  height: 15em;
+}
+
+.contact {
+  padding-bottom: 20px;
+}
+
+#contact-p {
+  background-color: #eeeeee;
+}
+
+#contact-p h2 {
+  padding: 10px 0 0;
+  line-height: 0;
+}
+
+#contact-p p {
+  text-align: left;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+.contact h2 {
+  font-family: "Monoton", sans-serif;
+  color: $color-pink;
+  font-size: 26px;
+  font-weight: lighter;
+  word-spacing: 10px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.contact .btn:hover {
+  background: #e8f46d;
+  text-decoration: none;
+}
+/***** footer *****/
+footer {
+  background: $color-text;
+  height: 150px;
+  padding: 20px 0 25px;
+}
+
+#contact p {
+  color: $color-white;
+  text-align: left;
+}
+
+#contact span {
+  font-weight: 600;
+}
+
+#contact a {
+  text-decoration: none;
+  color: $color-lemon;
+}
+
+#right-pad {
+  padding-right: 8px;
+}
+
+p #imprint {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #999;
+}
+
+#social-media {
+  float: right;
+  width: auto;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important;
+}
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */
+}
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+// Media Queries for Responsive Design.
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .main-header-graphic {
+    width: 30%;
+  }
+
+  #map {
+    padding: 20px 100px;
+    margin: 0 auto;
+  }
+
+  #contact-p {
+    text-align: center;
+    padding: 20px;
+  }
+
+  #contact-p h2,
+  #contact-p p {
+    text-align: center;
+  }
+
+}
+/* Medium devices (landscape tablets, 768px and below) */
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    background: $color-pink;
+    display: none;
+  }
+
+  .nav-list.open {
+    display: block;
+    background-color: $color-pink;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .nav-list li {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-list a {
+    color: $color-white;
+    padding: 10px;
+    display: block;
+    margin: 0;
+  }
+
+  .description {
+    float: left;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .main-header-graphic {
+    width: 30%;
+  }
+
+  #introduction,
+  #newsletter {
+    padding: 40px 100px;
+  }
+
+  #map {
+    padding: 20px 100px;
+    margin: 0 auto;
+  }
+
+  .feature {
+    width: 80%;
+    margin: 0 auto;
+    height: 12em;
+  }
+
+  .feature #f-image {
+    float: left;
+    max-width: 70%;
+  }
+
+  .feature img {
+    width: 100%;
+  }
+
+  #f-title {
+    float: left;
+    padding-left: 20px;
+    width: 30%;
+  }
+
+  .feature h3 {
+    font-size: 1em;
+    font-weight: 400;
+    background-color: $color-pink;
+    padding: 8px 20px;
+    color: $color-white;
+    text-align: left;
+    letter-spacing: 0.05em;
+    margin: 0 auto;
+  }
+
+  .description {
+    color: inherit;
+    text-align: left;
+    padding-left: 10px;
+    width: 40%;
+    float: left;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main-header-graphic {
+    width: 25%;
+  }
+
+  .feature {
+    margin: 0 auto;
+    height: 20em;
+    max-width: 70%;
+  }
+
+  #f-image {
+    float: left;
+    display: inline;
+    width: 40%;
+  }
+
+  .feature img {
+    width: 100%;
+  }
+
+  #f-title {
+    float: left;
+    padding-left: 40px;
+    width: 50%;
+  }
+
+  .feature h3 {
+    font-size: 1em;
+    font-weight: 400;
+    background-color: $color-pink;
+    padding: 8px 20px;
+    color: $color-white;
+    text-align: left;
+    letter-spacing: 0.05em;
+    margin: 0 auto;
+  }
+
+  .description {
+    color: inherit;
+    text-align: left;
+    padding-left: 40px;
+    width: 35%;
+    float: left;
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  button.accordion {
+    font-size: 1.5em;
+  }
+
+  button.accordion span {
+    font-size: 0.8em;
+  }
+
+  footer {
+    clear: both;
+  }
+
+  .description p {
+    padding: 0;
+  }
+
+  #contact-p {
+    text-align: center;
+    padding: 20px;
+  }
+
+  #contact-p h2,
+  #contact-p p {
+    text-align: center;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main-header-graphic {
+    width: 25%;
+  }
+}

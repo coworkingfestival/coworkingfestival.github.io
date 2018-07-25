@@ -3,29 +3,33 @@ layout: default
 title: Schedule
 banner: schedule-banner
 ---
-<section class="feature">
+
+<!-- uncommented until partnership finalized
+  <section class="feature">
   <div id="f-image">
     <img src="/img/feature-1.png" />
   </div>
   <div id="f-title">
-    <h3 >OPEN DOORS</h3>
+    <h3 >How does it work?</h3>
   </div>
   <div class="description">
     <p>
-      Visit any participating space, see what they are about and meet the people who call it home. At least one day is free in every space.
+        To make it easier for you we’ve partnered with the One Coworking App, you can use it to find the nearest space to you and check-in for free.
     </p>
   </div>
 </section>
+
+-->
 <section class="feature">
   <div id="f-image">
     <img src="/img/feature-2.png" />
   </div>
   <div id="f-title">
-    <h3 >EVENTS</h3>
+    <h3 >AMAZING EVENTS</h3>
   </div>
   <div class="description">
     <p>
-      Participate in workshops, meet-ups and exhibitions  in the spaces.  Details in the schedule below.
+      Participate in the many workshops, meet-ups, exhibitions and learn from other professionals in the coworking community who will share their knowledge around topics like technology, marketing, business operations, community building, and more. Meet new friends, potential partners and make meaningful connections. Details will be in the schedule below.
     </p>
   </div>
 </section>
@@ -34,12 +38,12 @@ banner: schedule-banner
     <img src="/img/feature-3.png" />
   </div>
   <div id="f-title">
-    <h3 >TOURS</h3>
+    <h3 >TOUR AROUND</h3>
   </div>
   <div class="description">
     <p>
-      Learn more about a space through an organized tour.
-      There are guided tours for single and multiple locations.  See TOURS for details.      </p>
+      Learn more about a space through an organized tour. Each space is unique, the amenities vary, and each community is different. Check out a space near you and join a tour. See <a href="./tours.html">Tours</a> for details.
+    </p>
   </div>
 </section>
 
@@ -47,166 +51,45 @@ banner: schedule-banner
   <div class="container">
 
   <!-- event one -->
-    <button class="accordion">Monday <span>&emsp;September 17</span></button>
-    <div class="accordion-content">
-      <div class="event">
-        <div class="row-1">
-          <p>8:30–9</p>
-          <p id="place">St. Oberholz</p>
-        </div>
-        <div class="row-2">
-          <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-        </div>
-      </div>
-      <div class="event">
-        <div class="row-1-pink">
-          <p>8:30–9</p>
-          <p id="place">St. Oberholz</p>
-        </div>
-        <div class="row-2-pink">
-          <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-        </div>
-      </div>
-      <div class="event">
-        <div class="row-1">
-          <p>8:30–9</p>
-          <p id="place">St. Oberholz</p>
-        </div>
-        <div class="row-2">
-          <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-        </div>
-      </div>
-    </div>
+  <button class="accordion">Monday <span>&emsp;September 17</span></button>
+  <div class="accordion-content">
+    {% for event in site.data.monday-events %}
+      {% include event.html %}
+    {% endfor %}
+  </div>
   <!-- end event one -->
   <!-- event two -->
   <button class="accordion" id="white">Tuesday <span>&emsp;September 18</span></button>
   <div class="accordion-content">
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1-pink">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2-pink">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
+    {% for event in site.data.tuesday-events %}
+      {% include event.html %}
+    {% endfor %}
   </div>
   <!-- end event two -->
 
   <!-- event three -->
   <button class="accordion">Wednesday <span>&emsp;September 19</span></button>
   <div class="accordion-content">
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1-pink">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2-pink">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
+    {% for event in site.data.wednesday-events %}
+      {% include event.html %}
+    {% endfor %}
   </div>
   <!-- end event three -->
 
   <!-- event four -->
   <button class="accordion" id="white">Thursday <span>&emsp;September 20</span></button>
   <div class="accordion-content">
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1-pink">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2-pink">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-  </div>
-  <!-- end event four -->
+    {% for event in site.data.thursday-events %}
+      {% include event.html %}
+    {% endfor %}
+  </div>  <!-- end event four -->
 
   <!-- event five -->
   <button class="accordion">Friday <span>&emsp;September 21</span></button>
   <div class="accordion-content">
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1-pink">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2-pink">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
-    <div class="event">
-      <div class="row-1">
-        <p>8:30–9</p>
-        <p id="place">St. Oberholz</p>
-      </div>
-      <div class="row-2">
-        <p>Guided 30 minutes tour about the history, architecture, and the functions of the St. Oberholz. There is no attendance fee for the tour, but all beverages have to be paid on the spot. Please note that the tour will be in German.</p>
-      </div>
-    </div>
+    {% for event in site.data.friday-events %}
+      {% include event.html %}
+    {% endfor %}
   </div>
   <!-- end event five -->
 
