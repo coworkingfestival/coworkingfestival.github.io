@@ -1,13 +1,14 @@
 html {
   font-size: 1em;
-  line-height: 1.4;
 }
 ::-moz-selection {
-  background: $color-pink;
+  background: $color-lemon;
+  color: $color-text;
   text-shadow: none;
 }
 ::selection {
-  background: $color-pink;
+  background: $color-lemon;
+  color: $color-text;
   text-shadow: none;
 }
 
@@ -17,13 +18,21 @@ body, input, button, textarea, select {
 
 body {
   color: $color-text;
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: center;
   font-weight: 400;
 }
 
+// links
+a, button, input, textarea, select {
+  transition: all 0.25s ease;
+}
+
 a {
   color: $color-pink;
+  text-decoration: none;
+
   &:hover, &:focus {
     color: $color-purple;
   }
@@ -37,38 +46,31 @@ a {
 }
 
 .introduction,
-.newsletter {
+.newsletter,
+.map {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.map {
+  max-width: 42rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 h1 {
   margin: 0;
 }
 
-p {
-  line-height: 28px;
-  padding: 0 30px;
-}
-
-a {
-  text-decoration: none;
-}
-
-a, button, input, textarea, select {
-  transition: all 0.25s ease;
-}
-
 .title {
-  font-family: "Monoton", sans-serif;
+  @include font-monoton;
+  font-size: 1.75rem;
   color: $color-white;
-  font-size: 3em;
-  font-weight: lighter;
   text-align: center;
-  margin: 0 auto;
-  padding-top: 90px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  padding-top: 5rem;
+  @media only screen and (min-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 // Layout
@@ -133,6 +135,7 @@ header {
   align-items: center;
   width: 100%;
   transition: all 0.25s ease;
+  z-index: 10;
 }
 
 .menu-toggle {
@@ -176,13 +179,16 @@ header h3 {
 }
 
 .language {
-  color: $color-text;
+  color: rgba($color-text, .5);
   font-weight: 600;
   a {
-    color: #3D3D3D;
+    color: $color-text;
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
+    &:hover, &:focus {
+      color: $color-purple;
+    }
   }
 }
 
@@ -190,13 +196,12 @@ header h3 {
   display: block;
   padding: 10px;
   h1 {
-    font-family: "Monoton", sans-serif;
+    margin: 0;
+    @include font-monoton;
     color: $color-purple;
-    font-weight: lighter;
     text-align: center;
-    text-transform: uppercase;
     transition: all 0.25s ease;
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
 
@@ -220,30 +225,23 @@ header h3 {
   background: $color-pink;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  h2 {
+    @include font-monoton;
+    color: $color-white;
+    font-size: 26px;
+  }
+  p {
+    color: $color-white;
+  }
+  span {
+    font-weight: 600;
+  }
+  a {
+    color: $color-lemon;
+  }
 }
 
-.newsletter h2 {
-  font-family: "Monoton", sans-serif;
-  font-weight: lighter;
-  word-spacing: .5em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: $color-white;
-  font-size: 26px;
-}
-
-.newsletter p {
-  color: $color-white;
-}
-
-.newsletter span {
-  font-weight: 600;
-}
-
-.newsletter span a {
-  color: $color-lemon;
-}
-
+// Buttons
 .btn {
   display: inline-block;
   border-radius: 5px;
@@ -278,11 +276,6 @@ header h3 {
 #tours-gray {
   background: #EFEFEC;
   height: 220px;
-}
-
-#map {
-  padding: 20px;
-  margin: 0 auto;
 }
 
 #googlemap {
@@ -342,17 +335,19 @@ header h3 {
 }
 
 .feature {
-  padding: 20px;
-  width: auto;
-  /* max-width: 50%; */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  clear: both;
 }
 
-.feature img {
-  float: right;
-  display: block;
+.feature-image {
+  img {
+    float: right;
+    display: block;
+  }
 }
 
-.feature h3 {
+.feature-title {
   font-size: 1em;
   font-weight: 400;
   background-color: $color-pink;
@@ -361,79 +356,25 @@ header h3 {
   color: $color-white;
   float: left;
   text-align: left;
-  margin-top: -27.5px;
+  margin-top: -30px;
   letter-spacing: 0.05em;
 }
 
-.description p {
-  color: inherit;
+.feature-description {
   text-align: left;
-  padding: inherit;
-  clear: both;
+  float: left;
 }
 
 .container {
-  width: 90%;
-  margin: 0 auto;
+  max-width: 42rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-#drop-down {
+.drop-down {
   margin-bottom: 50px;
-}
-
-button.accordion {
-  width: 100%;
-  background-color: #EFEFEC;
-  border: none;
-  outline: none;
-  text-align: left;
-  padding: 20px;
-  cursor: pointer;
-  transition: background-color 0.25s ease;
-  letter-spacing: .01em;
-  text-transform: uppercase;
-  color: $color-pink;
-  font-size: 1em;
-}
-
-button.accordion span {
-  color: $color-text;
-  text-transform: capitalize;
-}
-
-#white {
-  background-color: $color-white;
-}
-
-#white:hover {
-  background-color: #E5E5E5;
-}
-
-button.accordion:after {
-  content: '\f13a';
-  font-family: "fontawesome";
-  font-size: 1em;
-  font-weight: bolder;
-  float: right;
-}
-
-button.accordion.is-open:after {
-  content: '\f139';
-}
-
-button.accordion.is-open,
-button.accordion:hover {
-  background-color: #E5E5E5;
-}
-
-.accordion-content {
-  background-color: white;
-  border-left: 1px solid whitesmoke;
-  border-right: 1px solid whitesmoke;
-  padding: 0 15px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.25s ease-in-out;
 }
 
 /***** contact *****/
@@ -448,144 +389,52 @@ button.accordion:hover {
   padding-bottom: 3rem;
 }
 
-.contact-p {
+// Contact Details
+.contact-details {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #eeeeee;
-}
-
-.contact-p h2 {
-  line-height: 0;
-}
-
-.contact-p p {
-  text-align: left;
-  line-height: 1.5em;
+  h2 {
+    line-height: 0;
+  }
 }
 
 .contact h2 {
-  font-family: "Monoton", sans-serif;
+  @include font-monoton;
   color: $color-pink;
   font-size: 26px;
-  font-weight: lighter;
-  word-spacing: 10px;
   margin: 0 auto;
-  text-transform: uppercase;
   padding-top: 20px;
   text-align: center;
 }
 
-.contact .btn:hover {
-  background: #e8f46d;
-  text-decoration: none;
-}
 /***** footer *****/
 .footer {
   background-color: $color-text;
+  p {
+    color: $color-white;
+    text-align: left;
+  }
+  span {
+    font-weight: 600;
+  }
 }
 
-.footer p {
-  color: $color-white;
-  text-align: left;
-}
-
-.footer span {
-  font-weight: 600;
-}
-
-.footer  a {
-  text-decoration: none;
+.footer-link {
   color: $color-lemon;
   &:hover, &:focus {
     color: $color-pink;
   }
 }
 
-p #imprint {
+.small-footer-link {
   font-size: 14px;
   font-weight: lighter;
   color: #999;
+  &:hover, &:focus {
+    color: $color-pink;
+  }
 }
-
-#social-media {
-  float: right;
-  width: auto;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Hide visually and from screen readers
- */
-.hidden {
-  display: none !important;
-}
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-  /* 1 */
-}
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-  white-space: inherit;
-}
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-.invisible {
-  visibility: hidden;
-}
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.clearfix:after,
-.clearfix:before {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.clearfix:after {
-  clear: both;
-}
-
 // Media Queries for Responsive Design.
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -593,22 +442,6 @@ p #imprint {
   .main-header-graphic {
     width: 30%;
   }
-
-  #map {
-    padding: 20px 100px;
-    margin: 0 auto;
-  }
-
-  .contact-p {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .contact-p h2,
-  .contact-p p {
-    text-align: center;
-  }
-
 }
 /* Medium devices (landscape tablets, 768px and below) */
 @media only screen and (max-width: 768px) {
@@ -645,10 +478,6 @@ p #imprint {
     display: block;
     margin: 0;
   }
-
-  .description {
-    float: left;
-  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -657,38 +486,24 @@ p #imprint {
   }
 
   .introduction,
-  .newsletter {
+  .newsletter,
+  .map {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
 
-  #map {
-    padding: 20px 100px;
-    margin: 0 auto;
-  }
-
-  .feature {
-    width: 80%;
-    margin: 0 auto;
-    height: 12em;
-  }
-
-  .feature #f-image {
+  .feature-image {
     float: left;
     max-width: 70%;
+    img {
+      width: 100%;
+    }
   }
 
-  .feature img {
-    width: 100%;
-  }
-
-  #f-title {
+  .feature-title {
     float: left;
     padding-left: 20px;
     width: 30%;
-  }
-
-  .feature h3 {
     font-size: 1em;
     font-weight: 400;
     background-color: $color-pink;
@@ -697,14 +512,6 @@ p #imprint {
     text-align: left;
     letter-spacing: 0.05em;
     margin: 0 auto;
-  }
-
-  .description {
-    color: inherit;
-    text-align: left;
-    padding-left: 10px;
-    width: 40%;
-    float: left;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -713,29 +520,18 @@ p #imprint {
     width: 25%;
   }
 
-  .feature {
-    margin: 0 auto;
-    height: 20em;
-    max-width: 70%;
-  }
-
-  #f-image {
-    float: left;
+  .feature-image {
     display: inline;
-    width: 40%;
+    width: 50%;
+    img {
+      width: 100%;
+    }
   }
 
-  .feature img {
-    width: 100%;
-  }
-
-  #f-title {
+  .feature-title {
     float: left;
     padding-left: 40px;
     width: 50%;
-  }
-
-  .feature h3 {
     font-size: 1em;
     font-weight: 400;
     background-color: $color-pink;
@@ -746,43 +542,9 @@ p #imprint {
     margin: 0 auto;
   }
 
-  .description {
-    color: inherit;
-    text-align: left;
-    padding-left: 40px;
-    width: 35%;
-    float: left;
-  }
-
-  .container {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  button.accordion {
-    font-size: 1.5em;
-  }
-
-  button.accordion span {
-    font-size: 0.8em;
-  }
-
-  footer {
-    clear: both;
-  }
-
-  .description p {
-    padding: 0;
-  }
-
-  .contact-p {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .contact-p h2,
-  .contact-p p {
-    text-align: center;
+  .feature-description {
+    max-width: 50%;
+    padding-left: 2rem;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */

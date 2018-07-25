@@ -24,6 +24,7 @@
   transition: all 0.2s ease-in-out;
   img {
     display: block;
+    width: 100%;
     max-width: 200px;
   }
   &::after {

@@ -3,48 +3,47 @@ layout: default-de
 title: Programm
 banner: schedule-banner
 ---
-<section class="feature">
-  <div id="f-image">
-    <img src="/img/feature-2.png" />
-  </div>
-  <div id="f-title">
-    <h3 >TOLLE EVENTS</h3>
-  </div>
-  <div class="description">
-    <p>
-      Nimm an Workshops, Meet-ups und Kunstausstellungen in den Spaces teil. Details in der folgenden Agenda.
-    </p>
-  </div>
-</section>
-<section class="feature">
-  <div id="f-image">
-    <img src="/img/feature-3.png" />
-  </div>
-  <div id="f-title">
-    <h3 >MACH EINE TOUR</h3>
-  </div>
-  <div class="description">
-    <p>
-      Lerne einen Space bei einer geführten Tour im Detail kennen. Es gibt Touren für einzelne und mehre Spaces.
-      Mehr unter <a href="./tours-de.html" >TOUREN</a>.
-    </p>
-  </div>
-</section>
 
-<section id="drop-down">
+<div class="container">
+  <section class="feature">
+    <div class="feature-image">
+      <img src="/img/feature-2.png" />
+    </div>
+    <h3 class="feature-title">Events</h3>
+    <div class="feature-description">
+      <p>
+        Nimm an Workshops, Meet-ups und Kunstausstellungen in den Spaces teil. Details in der folgenden Agenda.
+      </p>
+    </div>
+  </section>
+  <section class="feature">
+    <div class="feature-image">
+      <img src="/img/feature-3.png" />
+    </div>
+    <h3 class="feature-title">Geh auf Tour</h3>
+    <div class="feature-description">
+      <p>
+        Lerne einen Space bei einer geführten Tour im Detail kennen. Es gibt Touren für einzelne oder mehre Spaces.
+        Mehr unter <a href="./tours-de.html">Touren</a>.
+      </p>
+    </div>
+  </section>
+</div>
+
+<section class="cb pv4 pv5-l">
   <div class="container">
 
   <!-- event one -->
-  <button class="accordion">Montag <span>&emsp;September 17</span></button>
-  <div class="accordion-content">
+  <button class="js-accordion event-day-header">Montag <span class="event-date">September 17</span></button>
+  <div class="event-content">
     {% for event in site.data.monday-events %}
       {% include event.html %}
     {% endfor %}
   </div>
   <!-- end event one -->
   <!-- event two -->
-  <button class="accordion" id="white">Dienstag <span>&emsp;September 18</span></button>
-  <div class="accordion-content">
+  <button class="js-accordion event-day-header" id="white">Dienstag <span class="event-date">September 18</span></button>
+  <div class="event-content">
     {% for event in site.data.tuesday-events %}
       {% include event.html %}
     {% endfor %}
@@ -52,8 +51,8 @@ banner: schedule-banner
   <!-- end event two -->
 
   <!-- event three -->
-  <button class="accordion">Mittwoch <span>&emsp;September 19</span></button>
-  <div class="accordion-content">
+  <button class="js-accordion event-day-header">Mittwoch <span class="event-date">September 19</span></button>
+  <div class="event-content">
     {% for event in site.data.wednesday-events %}
       {% include event-de.html %}
     {% endfor %}
@@ -61,16 +60,16 @@ banner: schedule-banner
   <!-- end event three -->
 
   <!-- event four -->
-  <button class="accordion" id="white">Donnerstag <span>&emsp;September 20</span></button>
-  <div class="accordion-content">
+  <button class="js-accordion event-day-header" id="white">Donnerstag <span class="event-date">September 20</span></button>
+  <div class="event-content">
     {% for event in site.data.thursday-events %}
       {% include event.html %}
     {% endfor %}
   </div>  <!-- end event four -->
 
   <!-- event five -->
-  <button class="accordion">Freitag <span>&emsp;September 21</span></button>
-  <div class="accordion-content">
+  <button class="js-accordion event-day-header">Freitag <span class="event-date">September 21</span></button>
+  <div class="event-content">
     {% for event in site.data.friday-events %}
       {% include event.html %}
     {% endfor %}
