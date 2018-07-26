@@ -1,0 +1,38 @@
+
+/***** faq *****/
+#faq-banner {
+  background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/faq-banner.png") no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  height: 15em;
+}
+
+.faq {
+  padding-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+  p {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $color-pink;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .faq {
+    img {
+      width: 40%;
+      margin-right: 2rem;
+      margin-bottom: 6rem;
+      float: left;
+      clear: left;
+    }
+  }
+  .faq-body {
+    margin-left: calc(40% + 2rem);
+  }
+}

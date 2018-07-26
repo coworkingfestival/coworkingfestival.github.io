@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    $(".menu").on("click", function(){
+    $(".menu-toggle").on("click", function(){
 
-        $("header nav ul").toggleClass("open");
+        $(".nav-list").toggleClass("open");
     })
 
 })

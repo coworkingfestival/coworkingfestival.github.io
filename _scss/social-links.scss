@@ -1,0 +1,13 @@
+.social-icons {
+  display: flex;
+  min-width: 8rem;
+  justify-content: space-between;
+}
+
+.social-icon-link {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  &:hover, &:focus {
+    transform: scale(1.2);
+  }
+}

@@ -1,4 +1,4 @@
-var accordions = document.getElementsByClassName("accordion");
+var accordions = document.getElementsByClassName("js-accordion");
 
 for (var i = 0; i < accordions.length; i++) {
   accordions[i].onclick = function() {
