@@ -258,6 +258,13 @@ header h3 {
   }
 }
 
+.btn.pink {
+  background-color: $color-pink;
+  color: $color-white;
+  &:hover, &:focus {
+    background-color: darken($color-pink, 20%);
+  }
+}
 /***** tours *****/
 #tours-banner {
   background: linear-gradient(to right, rgba($color-pink,.88), rgba($color-lemon,.88) ), url("../img/tours.jpg");
