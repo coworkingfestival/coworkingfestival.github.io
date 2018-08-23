@@ -7,22 +7,22 @@
     <header>
       <nav class="navigation" id="myHeader">
         <a class="menu-toggle"></a>
-        <a href="./index-de.html" class="logo">
+        <a href="{% link index-de.html %}" class="logo">
           <h1>Cowork</h1>
         </a>
         <div class="nav-group">
           <ul class="nav-list">
-            <li><a href="./schedule-de.html">Programm</a></li>
-            <li><a href="./tours-de.html">Touren</a></li>
-            <li><a href="./faq-de.html">faq</a></li>
-            <li><a href="./contact-de.html">Kontakt</a></li>
+            <li><a href="{% link schedule-de.html %}">Programm</a></li>
+            <li><a href="{% link tours-de.html %}">Touren</a></li>
+            <li><a href="{% link faq-de.html %}">faq</a></li>
+            <li><a href="{% link contact-de.html %}">Kontakt</a></li>
           </ul>
           {% include language-switch.html %}
         </div>
       </nav>
       <div class="homepage" id="{{page.banner}}">
         {% unless page.banner %}
-          <img src="img/logo-lockup-p.svg" class="main-header-graphic" />
+          <img src="/img/logo-lockup-p.svg" class="main-header-graphic" />
         {% endunless %}
 
         {% if page.title %}
@@ -44,7 +44,7 @@
           <a href="mailto:berlincoworking@gmail.com" class="footer-link" target="_blank">berlincoworking@gmail.com</a>
         </p>
         <p>
-          <a href="/imprint.html" class="small-footer-link" target="_blank">Impressum</a>
+          <a href="{% link imprint.html %}" class="small-footer-link" target="_blank">Impressum</a>
         </p>
       </div>
       <div>

@@ -7,22 +7,22 @@
     <header>
       <nav class="navigation" id="myHeader">
         <a class="menu-toggle"></a>
-        <a href="index.html" class="logo">
+        <a href="{% link index.html %}" class="logo">
           <h1>Cowork</h1>
         </a>
         <div class="nav-group">
           <ul class="nav-list">
-            <li><a href="./schedule.html">Schedule</a></li>
-            <li><a href="./tours.html">Tours</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="{% link schedule.html %}">Schedule</a></li>
+            <li><a href="{% link tours.html %}">Tours</a></li>
+            <li><a href="{% link faq.html %}">FAQ</a></li>
+            <li><a href="{% link contact.html %}">Contact</a></li>
           </ul>
           {% include language-switch.html %}
         </div>
       </nav>
       <div class="homepage" id="{{page.banner}}">
         {% unless page.banner %}
-        <img src="img/logo-lockup-p.svg" class="main-header-graphic" /> {% endunless %} {% if page.title %}
+        <img src="/img/logo-lockup-p.svg" class="main-header-graphic" /> {% endunless %} {% if page.title %}
         <h1 class="title">{{page.title}}</h1> {% endif %}
       </div>
     </header>
@@ -40,7 +40,7 @@
           <a href="mailto:berlincoworking@gmail.com" class="footer-link" target="_blank">berlincoworking@gmail.com</a>
         </p>
         <p>
-          <a href="/imprint.html" class="small-footer-link" target="_blank">Imprint</a>
+          <a href="{% link imprint.html %}" class="small-footer-link" target="_blank">Imprint</a>
         </p>
       </div>
       <div>
