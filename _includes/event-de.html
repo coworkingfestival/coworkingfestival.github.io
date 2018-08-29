@@ -1,6 +1,6 @@
 <div class="event">
   <p class="event-time">
-    {{event.start_time | date: "%I:%M%P"}}&nbsp;-&nbsp;{{event.end_time | date: "%I:%M%P"}}
+    {{event.start_time | date: "%H:%M"}}&nbsp;-&nbsp;{{event.end_time | date: "%H:%M"}}
   </p>
   <p class="event-location">
     {{event.Space}}
@@ -13,7 +13,7 @@
     {% else %}
     <a href="#">
     {% endif %}
-      {{ event.event_desc_eng | newline_to_br }}
+      {{ event.event_desc_de | newline_to_br }}
     </a>
   </p>
 </div>

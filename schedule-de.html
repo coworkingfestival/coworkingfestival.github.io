@@ -33,44 +33,55 @@ banner: schedule-banner
 
 <section class="cb pv4 pv5-l">
   <div class="container">
-  <h2>Programm folgt bald...</h2>
-  <!-- no shedule yet
   <button class="js-accordion event-day-header">Montag <span class="event-date">September 17</span></button>
   <div class="event-content">
-    {% for event in site.data.monday-events %}
-      {% include event.html %}
+    {% for event in site.data.events %}
+      {% if event.weekday == "Monday" %}
+        {% include event-de.html %}
+      {% endif %}
     {% endfor %}
+
   </div>
 
   <button class="js-accordion event-day-header" id="white">Dienstag <span class="event-date">September 18</span></button>
   <div class="event-content">
-    {% for event in site.data.tuesday-events %}
-      {% include event.html %}
+    {% for event in site.data.events %}
+      {% if event.weekday == "Tuesday" %}
+        {% include event-de.html %}
+      {% endif %}
     {% endfor %}
+
   </div>
 
 
   <button class="js-accordion event-day-header">Mittwoch <span class="event-date">September 19</span></button>
   <div class="event-content">
-    {% for event in site.data.wednesday-events %}
-      {% include event-de.html %}
+    {% for event in site.data.events %}
+      {% if event.weekday == "Wednesday" %}
+        {% include event-de.html %}
+      {% endif %}
     {% endfor %}
+
   </div>
 
   <button class="js-accordion event-day-header" id="white">Donnerstag <span class="event-date">September 20</span></button>
   <div class="event-content">
-    {% for event in site.data.thursday-events %}
-      {% include event.html %}
+    {% for event in site.data.events %}
+      {% if event.weekday == "Thursday" %}
+        {% include event-de.html %}
+      {% endif %}
     {% endfor %}
+
   </div>
 
   <button class="js-accordion event-day-header">Freitag <span class="event-date">September 21</span></button>
   <div class="event-content">
-    {% for event in site.data.friday-events %}
-      {% include event.html %}
+    {% for event in site.data.events %}
+      {% if event.weekday == "Friday" %}
+        {% include event-de.html %}
+      {% endif %}
     {% endfor %}
   </div>
-  -->
 
   </div>
 </section>
