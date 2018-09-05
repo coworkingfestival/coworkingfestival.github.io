@@ -6,12 +6,15 @@
     {{event.Space}}
   </p>
   <p class="event-description">
-    {% if event.event.url %}
+    {% if event.url %}
     <a href="{{ event.url }}" target="_blank">
     {% elsif event.fb_url %}
     <a href="{{ event.fb_url }}" target="_blank">
     {% else %}
     <a href="#">
+    {% endif %}
+    {% if event.paid == 'Yes' %}
+    (Kostenpflichtig)
     {% endif %}
       {{ event.event_desc_de | newline_to_br }}
     </a>
