@@ -1,5 +1,5 @@
 ---
-layout: default-de
+layout: 2018/default-de
 title: Datenschutz
 banner: contact-banner
 ---
@@ -24,7 +24,7 @@ Thilo Utke
 
 Email: berlincoworking@gmail.com
 
-<a href="{% link imprint.html %}">
+<a href="{% link 2018/imprint.html %}">
   Impressum
 </a>
 

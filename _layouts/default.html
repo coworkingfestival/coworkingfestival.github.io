@@ -1,54 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="site-body">
-    <header>
-      <nav class="navigation" id="myHeader">
-        <a class="menu-toggle"></a>
-        <a href="{% link index.html %}" class="logo">
-          <h1>Cowork</h1>
-        </a>
-        <div class="nav-group">
-          <ul class="nav-list">
-            <li><a href="{% link schedule.html %}">Schedule</a></li>
-            <li><a href="{% link tours.html %}">Tours</a></li>
-            <li><a href="{% link faq.html %}">FAQ</a></li>
-            <li><a href="{% link contact.html %}">Contact</a></li>
-          </ul>
-          {% include language-switch.html %}
-        </div>
-      </nav>
-      <div class="homepage" id="{{page.banner}}">
-        {% unless page.banner %}
-        <img src="/img/logo-lockup-p.svg" class="main-header-graphic" /> {% endunless %} {% if page.title %}
-        <h1 class="title">{{page.title}}</h1> {% endif %}
-      </div>
-    </header>
-
-    <main class="site-main">
-      {{content}}
-    </main>
-
-    {% include sponsor-footer.html %}
-
-    <footer class="footer flex flex-wrap justify-between items-center tl pv4 ph3 ph4-l">
-      <div>
-        <p>
-          Get in touch<br />
-          <a href="mailto:berlincoworking@gmail.com" class="footer-link" target="_blank">berlincoworking@gmail.com</a>
-        </p>
-        <p>
-          <a href="{% link imprint.html %}" class="small-footer-link" target="_blank">Imprint</a>
-          | <a href="{% link datenschutz.md %}" class="small-footer-link" target="_blank">Privcay Policy</a>
-        </p>
-      </div>
-      <div>
-        {% include social-links.html %}
-      </div>
-    </footer>
-    {% include scripts.html %}
-  </body>
+<body class="site-body">
+  <main class="site-main" style="text-align: center">
+    {{content}}
+  </main>
+</body>
 
 </html>

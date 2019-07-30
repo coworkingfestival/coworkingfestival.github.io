@@ -1,0 +1,111 @@
+---
+layout: 2018/default
+title: Schedule
+banner: schedule-banner
+---
+
+<!-- uncommented until partnership finalized
+  <section class="feature">
+  <div class="feature-image">
+    <img src="/img/feature-1.png" />
+  </div>
+  <h3 class="feature-title">How does it work?</h3>
+  <div class="feature-description">
+    <p>
+      We’ve partnered with One Coworking, the app that helps you to find your nearest available space and check-in for free.
+    </p>
+  </div>
+</section>
+
+-->
+
+<div class="container">
+  <section class="feature">
+    <div class="feature-image">
+      <img src="/img/feature-2.png" />
+    </div>
+    <h3 class="feature-title">Events</h3>
+    <div class="feature-description">
+      <p>
+        Participate in the many workshops, meet-ups, exhibitions and learn from other professionals in the coworking
+        community who will share their knowledge around topics like technology, marketing, business operations,
+        community building, and more. Meet new friends, potential partners and make meaningful connections. Details will
+        be in the schedule below.
+      </p>
+    </div>
+  </section>
+  <section class="feature">
+    <div class="feature-image">
+      <img src="/img/feature-3.png" />
+    </div>
+    <h3 class="feature-title">Tour & Explore</h3>
+    <div class="feature-description">
+      <p>
+        Learn more about a space through an organized tour. Each space is unique, the amenities vary, and each community
+        is different. Check out a space near you and join a tour. See <a href="{% link 2018/tours.html %}">Tours</a> for
+        details.
+      </p>
+    </div>
+  </section>
+</div>
+
+<section class="cb pv4 pv5-l">
+  <div class="container">
+
+    <button class="js-accordion event-day-header">Monday <span class="event-date">September 17</span></button>
+    <div class="event-content">
+      {% for event in site.data.events %}
+      {% if event.weekday == "Monday" %}
+      {% include 2018/event.html %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <button class="js-accordion event-day-header" id="white">Tuesday <span class="event-date">September
+        18</span></button>
+    <div class="event-content">
+      {% for event in site.data.events %}
+      {% if event.weekday == "Tuesday" %}
+      {% include 2018/event.html %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <button class="js-accordion event-day-header">Wednesday <span class="event-date">September 19</span></button>
+    <div class="event-content">
+      {% for event in site.data.events %}
+      {% if event.weekday == "Wednesday" %}
+      {% include 2018/event.html %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <button class="js-accordion event-day-header" id="white">Thursday <span class="event-date">September
+        20</span></button>
+    <div class="event-content">
+      {% for event in site.data.events %}
+      {% if event.weekday == "Thursday" %}
+      {% include 2018/event.html %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <button class="js-accordion event-day-header">Friday <span class="event-date">September 21</span></button>
+    <div class="event-content">
+      {% for event in site.data.events %}
+      {% if event.weekday == "Friday" %}
+      {% include 2018/event.html %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="banner-special-events cb pt3 pb4">
+  <div class="container">
+    <h2>Special Event</h2>
+    <a href="https://www.tuesdaycoworking.com/football-fives" target="_blank">
+      <img src="/img/banner-football.jpg" alt="Berlin Coworking Football Fives by tuesday coworking"></img>
+    </a>
+  </div>
+  </div>
