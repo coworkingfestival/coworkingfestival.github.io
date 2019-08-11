@@ -1,0 +1,15 @@
+//  Colors and other style variables
+
+$color-text: #3D3D3D;
+$color-white: #FFFFFF;
+$color-pink: #D741A7;
+$color-purple: #3A1772;
+$color-lemon: #E6FA30;
+
+@mixin font-monoton {
+  font-family: "Monoton", sans-serif;
+  font-weight: lighter;
+  word-spacing: .5em;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}

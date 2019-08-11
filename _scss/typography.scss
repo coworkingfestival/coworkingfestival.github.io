@@ -1,0 +1,85 @@
+body {
+  font-family: sofia-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn,
+.font-condensed,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sofia-pro-condensed, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.bold,
+b,
+strong {
+  font-family: sofia-pro,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.italic,
+em,
+i {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+a, button, input, select, textarea,
+.btn {
+  transition-property: color, background-color, border;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: $color-teal;
+  &:hover, &:focus {
+    color: $color-purple;
+  }
+}
+
+.link--footer {
+  color: $color-text-50;
+  padding: 1rem;
+  &:hover, &:focus {
+    color: $color-purple;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  border: 0;
+  color: $color-text;
+  font-size: 16px;
+  background-color: $color-lemon;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  letter-spacing: .05em;
+  &:hover, &:focus {
+    color: $color-text;
+    background-color: darken($color-lemon, 20%);
+  }
+}
+
+.btn--yellow {
+
+}
+
+.btn--teal {
+
+}
+
+.btn--pink {
+
+}
