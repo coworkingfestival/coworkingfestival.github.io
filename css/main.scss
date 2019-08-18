@@ -96,6 +96,8 @@
   max-width: 110%;
   top: calc(-1 * var(--media-top-offset));
   right: -5rem;
+  position: absolute;
+  z-index: -3;
   @include media-query($size-s) {
     right: -10rem;
     max-width: 90%;
@@ -103,8 +105,10 @@
   @include media-query($size-l) {
     right: -12rem;
   }
-  position: absolute;
-  z-index: -3;
+  @include media-query($size-xl) {
+    max-width: 100%;
+    right: -22rem;
+  }
 }
 
 .media-content__content {
@@ -130,5 +134,12 @@
       url("../img/backgrounds/parallax-pink.svg");
     background-size: 381px, 182px, 541px;
     background-position: 122% 30rem, 5rem -9rem, 2rem 113%;
+  }
+  @include media-query($size-xl) {
+    background-position: 112% 30rem, 5rem -9rem, 2rem 113%;
+
+  }
+  @include media-query($size-xxl) {
+    background-position: 108% 30rem, 5rem -9rem, 2rem 113%;
   }
 }
