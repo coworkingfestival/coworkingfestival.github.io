@@ -5,40 +5,44 @@
 // Imports
 @import "variables";
 @import "box-sizing-reset";
-@import "normalize";
-@import "typography";
-// @import "main";
 @import "tachyons";
+@import "typography";
+@import "logo";
+@import "spaces";
+@import "cookie-banner";
 
 
-html {
-  font-size: 1em;
-}
 ::-moz-selection {
-  background: $color-lemon;
+  background: $color-yellow;
   color: $color-text;
   text-shadow: none;
 }
 ::selection {
-  background: $color-lemon;
+  background: $color-yellow;
   color: $color-text;
   text-shadow: none;
 }
 
-body {
-  color: $color-text;
-  font-size: 1rem;
-  line-height: 1.666;
-}
-
 // layout
 .site-body {
+  position: relative;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 .site-main {
   flex-grow: 1;
+  overflow: hidden;
+}
+
+.site-header {
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-query($size-m) {
+    padding: 8rem 2rem;
+  }
 }
 
 .site-footer {
@@ -46,51 +50,85 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  font-size: .75rem;
+  padding: 3rem 1rem 1rem 1rem;
 }
 
-// temporary landing page
-.logo {
-  font-size: 2.5rem;
-  letter-spacing: .025em;
-}
-
-.logo__x {
-  color: $color-coral;
-}
-
-.interim-landing {
-  margin: auto;
-  max-width: 42rem;
-  padding: 1rem;
-}
-
-.landing-block {
-  &:after, &:before {
-    content: '';
-    margin: 1rem 0;
-    display: block;
-    width: 3.25rem;
-    height: 6px;
-    background-color: $color-teal;
-  }
-  &:after {
-    background-color: $color-pink;
+.container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  @include media-query($size-l) {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
   }
 }
 
+.section {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-// cookie banner
-.cc-theme-edgeless.cc-window {
-  border: 10px solid $color-lemon;
-  left: unset !important;
-  font-size: .75rem;
-  font-family: sofia-pro,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  max-width: 24rem;
-  padding: 1rem !important;
-  .cc-btn {
-    white-space: nowrap;
+.section--64 {
+  max-width: 64rem;
+}
+
+.section--120 {
+  max-width: 120rem;
+}
+
+.media-content {
+  --media-top-offset: 12rem;
+  @include media-query($size-s) {
+    --media-top-offset: 14rem;
+  }
+  @include media-query($size-m) {
+    --media-top-offset: 10rem;
+  }
+  @include media-query($size-l) {
+    --media-top-offset: 8rem;
+  }
+  margin-top: var(--media-top-offset);
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.media-content__media {
+  max-width: 110%;
+  top: calc(-1 * var(--media-top-offset));
+  right: -5rem;
+  @include media-query($size-s) {
+    right: -10rem;
+    max-width: 90%;
+  }
+  @include media-query($size-l) {
+    right: -12rem;
+  }
+  position: absolute;
+  z-index: -3;
+}
+
+.media-content__content {
+  @include media-query($size-s) {
+    width: 75%;
+  }
+  @include media-query($size-m) {
+    width: 66.6667%;
+  }
+}
+
+.parallax {
+  z-index: -10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @include media-query($size-l) {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image:
+      url("../img/backgrounds/parallax-lavender.svg"),
+      url("../img/backgrounds/parallax-yellow.svg"),
+      url("../img/backgrounds/parallax-pink.svg");
+    background-size: 381px, 182px, 541px;
+    background-position: 122% 30rem, 5rem -9rem, 2rem 113%;
   }
 }

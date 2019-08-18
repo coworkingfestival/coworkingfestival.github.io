@@ -1,26 +1,87 @@
+html {
+  font-size: 1em;
+}
 body {
-  font-family: sofia-pro,sans-serif;
+  color: $color-text;
+  font-size: 1.25rem; // base-font-size: 20px;
+  line-height: 1.666;
+  font-family: sofia-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.btn,
 .font-condensed,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: sofia-pro-condensed, sans-serif;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.25;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, blockquote {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.h-huge {
+  font-size: 7.594rem;
+}
+
+h1 {
+  font-size: 3.275rem;
+  @include media-query($size-s) {
+    font-size: 5.063rem;
+  }
+}
+
+h2 {
+  font-size: 2.25rem;
+  @include media-query($size-s) {
+    font-size: 3.275rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  @include media-query($size-s) {
+    font-size: 2.25rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  @include media-query($size-s) {
+    font-size: 1.5rem;
+  }
+}
+
+.text-huge {
+  font-size: 1.5rem;
+  @include media-query($size-s) {
+    font-size: 2.25rem;
+  }
+}
+
+.text-large {
+  font-size: 1.25rem;
+  @include media-query($size-s) {
+    font-size: 1.5rem;
+  }
+}
+
+.text-small {
+  font-size: 0.667rem;
+}
+
+.text-tiny {
+  font-size: 0.444rem;
 }
 
 .bold,
 b,
 strong {
-  font-family: sofia-pro,sans-serif;
+  font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -35,9 +96,9 @@ i {
 
 a, button, input, select, textarea,
 .btn {
-  transition-property: color, background-color, border;
-  transition-duration: .1s;
-  transition-timing-function: ease-in-out;
+  transition-property: color, background-color, border, transform, box-shadow;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
 }
 
 a {
@@ -49,26 +110,33 @@ a {
 }
 
 .link--footer {
-  color: $color-text-50;
+  color: $color-text;
   padding: 1rem;
   &:hover, &:focus {
-    color: $color-purple;
+    color: $color-pink;
   }
 }
 
 .btn {
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 3rem;
   border: 0;
   color: $color-text;
-  font-size: 16px;
-  background-color: $color-lemon;
+  font-size: 1rem;
+  background-color: $color-yellow;
   padding: 1rem 2rem;
   text-decoration: none;
   letter-spacing: .05em;
   &:hover, &:focus {
     color: $color-text;
-    background-color: darken($color-lemon, 20%);
+    background-color: lighten($color-yellow, 20%);
+  }
+}
+
+.btn--big {
+  font-size: 1.125rem;
+  @include media-query($size-s) {
+    font-size: 1.5rem;
   }
 }
 
@@ -82,4 +150,14 @@ a {
 
 .btn--pink {
 
+}
+
+.btn--border-with-shadow {
+  position: relative;
+  border: 2px solid currentColor;
+  box-shadow: -.75rem .75rem 0 currentColor;
+  &:hover, &:focus {
+    box-shadow: -.5rem .5rem 0 currentColor;
+
+  }
 }

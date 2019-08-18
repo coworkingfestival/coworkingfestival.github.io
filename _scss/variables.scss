@@ -6,5 +6,23 @@ $color-white: #FFFFFF;
 $color-pink: #f01a66;
 $color-coral: #fe8876;
 $color-purple: #3A1772;
-$color-lemon: #f9dd42;
+$color-yellow: #f9dd42;
 $color-teal: #1791bd;
+
+// media queries & breakpoints
+// Media-Query Mixin
+@mixin media-query($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+$size-xs: 480px;
+$size-s: 640px;
+$size-m: 960px;
+$size-l: 1280px;
+$size-xl: 1440px;
+$size-xxl: 1920px;
+
+$transition-timing-function: ease-in-out;
+$transition-duration: .15s;

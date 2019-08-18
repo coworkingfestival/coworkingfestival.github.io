@@ -1,0 +1,20 @@
+<div class="grid-spaces center mv6">
+  {% for space in site.spaces %}
+    <a class="space rotate-10" href="{{ space.link }}" target="_blank">
+      <div class="space__logo border-with-shadow">
+        <img src="{{ site.baseurl }}/img/logos/{{ space.logo }}" alt="{{ space.name }} Photo" />
+      </div>
+      <div class="space__info border-with-shadow">
+        <h4>{{ space.name }}</h4>
+        <p class="space__info__small">
+          {{ space.address }}
+        </p>
+      </div>
+      {% if space.image %}
+        <div class="space__photo">
+          <img src="{{ site.baseurl }}/img/space-photos/{{ space.image }}" alt="{{ space.name }} Photo" />
+        </div>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>
