@@ -1,0 +1,151 @@
+// spaces
+
+.grid-spaces {
+  max-width: 1920px;
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  @include media-query($size-xs) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include media-query($size-s) {
+    grid-gap: 6rem;
+  }
+  @include media-query($size-l) {
+    grid-gap: 10rem 6rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.space {
+  width: 12rem;
+  height: 9rem;
+  @include media-query($size-s) {
+    width: 16rem;
+    height: 12rem;
+  }
+  @include media-query($size-m) {
+    width: 20rem;
+    height: 15rem;
+  }
+  @include media-query($size-xxl) {
+    width: 24rem;
+    height: 18rem;
+  }
+  display: block;
+  color: $color-text;
+  position: relative;
+  h4, p {
+    line-height: 1.666;
+    margin-bottom: 0;
+  }
+  &:hover, &:focus {
+    color: $color-text;
+    cursor: pointer;
+    .space__info {
+      opacity: 1;
+    }
+    .space__logo {
+      opacity: 0;
+    }
+    .space__photo {
+      opacity: 1;
+      transform: rotate(10deg) scale(1);
+    }
+  }
+}
+
+.space__logo,
+.space__info {
+  position: absolute;
+  padding: 1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-property: opacity;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  background-color: $color-white;
+}
+
+.space__logo {
+  display: flex;
+  img {
+    margin: auto;
+    display: block;
+  }
+}
+
+.space__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+}
+
+.space__info__small {
+  font-size: 0.667rem;
+  @include media-query($size-m) {
+    font-size: 1rem;
+  }
+}
+
+.space__photo {
+  pointer-events: none;
+  position: absolute;
+  bottom: 2rem;
+  left: -50%;
+  width: 90vw;
+  opacity: 0;
+  z-index: -2;
+  transform: rotate(0) scale(.5);
+  transition-property: opacity, transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  @include media-query($size-xs) {
+    left: -50%;
+    width: 90vw;
+  }
+  @include media-query($size-s) {
+    left: -50%;
+    width: 60vw;
+  }
+  @include media-query($size-l) {
+  }
+}
+
+.rotate-10 {
+  transform: rotate(-10deg);
+}
+
+.rotate-10--on-hover {
+  &:hover, &:focus {
+    transform: rotate(-10deg);
+  }
+}
+
+.border-with-shadow {
+  border: 2px solid currentColor;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  box-shadow: -1rem 1rem 0 currentColor;
+}
+
+.border-with-shadow--yellow {
+  border-color: $color-yellow;
+  &:before {
+    background-color: $color-yellow;
+  }
+}
+
+.border-with-shadow--coral {
+  border-color: $color-coral;
+  &:before {
+    background-color: $color-coral;
+  }
+}

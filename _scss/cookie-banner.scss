@@ -1,0 +1,17 @@
+// cookie banner
+.cc-theme-edgeless.cc-window {
+  border: 10px solid $color-yellow;
+  left: unset !important;
+  font-size: .75rem;
+  font-family: sofia-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 24rem;
+  padding: 1rem !important;
+  transform: rotate(10deg);
+  left: 1rem;
+  bottom: 2.5rem;
+  .cc-btn {
+    white-space: nowrap;
+  }
+}

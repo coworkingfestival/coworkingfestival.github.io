@@ -9,17 +9,17 @@
 * Read instructions here: https://jekyllrb.com/docs/windows/
 
 
-## Usage
+## Development
 
 To run the site locally and view it in your browser:
 * Open Terminal.app (Mac).
 * Go to the directory of the project (e.g. `cd projects/coworkingfestival`)
 * Start the site generator with `jekyll serve --live`.
 
-This will start a webserver. Now you can view the site in your browser at http://127.0.0.1:4000.
+This will start a web server. Now you can view the site in your browser at http://127.0.0.1:4000.
 
 See how to work with files at https://jekyllrb.com/docs/pages/.
 
 ### Editing Schedule
 
-Open the csv file called e.g. `monday-events.csv` for the progamm day under `data` in a speardsheet program and make the changes. Save them and send them with `git commit -am 'schedule update' & git push`.
+In order to edit the schedule, open the .csv file called e.g. `monday-events.csv` for the program day under `data` in a spreadsheet application and make the changes. Save the changes and commit them with `git commit -am 'schedule update' & git push`.

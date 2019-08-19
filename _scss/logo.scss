@@ -1,0 +1,55 @@
+// logo
+.logo {
+  display: grid;
+  grid-gap: .5em 1em;
+  align-items: end;
+  font-size: 1rem;
+  max-width: 20rem;
+  color: $color-text;
+  font-family: sofia-pro-condensed, sans-serif;
+  &:hover, &:focus {
+    color: $color-text;
+    .logo__x {
+      color: $color-pink;
+      transform: rotate(350deg);
+    }
+  }
+  @include media-query($size-s) {
+    font-size: 2rem;
+    max-width: 42rem;
+  }
+}
+
+.logo__x {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: $color-coral;
+  font-size: calc(21.4375em / 4); // 343px
+  line-height: 0.91;
+  text-align: right;
+  transition-property: color, background-color, border, transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+}
+
+.logo__name {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-size: calc(7.5em / 4); // 120px
+  line-height: 1.275; // 154px
+  letter-spacing: .025em;
+}
+
+.logo__details {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: calc(2.5em / 2); // 80px
+  @include media-query($size-m) {
+    font-size: calc(2.5em / 4); // 40px
+  }
+  line-height: 1;
+}
+
+.logo__location {
+  display: block;
+}

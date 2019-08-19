@@ -4,19 +4,27 @@
 {% include head.html %}
 
 <body class="site-body">
-  <!-- <header>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">
+        <div class="logo__x">X</div>
+        <div class="logo__name"><span class="logo__location">Berlin</span> Coworking Festival</div>
+        <div class="logo__details">9. – 13. September 2019</div>
+      </a>
+    </div>
+  </header>
 
-  </header> -->
-
-  <main class="site-main flex">
+  <main class="site-main">
     {{content}}
   </main>
 
   <footer class="site-footer">
-    <a href="/2018/index.html" target="_blank" class="link--footer">Coworking Festival 2018 Website</a>
+    <a href="https://2018.coworkingfestival.com" target="_blank" class="link--footer">2018 Website</a>
     <a href="mailto:berlincoworking@gmail.com" target="_blank" class="link--footer">berlincoworking@gmail.com</a>
-    <a href="{% link 2018/imprint.html %}" class="link--footer">Imprint</a>
+    <a href="{% link impressum.html %}" class="link--footer">Impressum</a>
   </footer>
+  <div class="parallax"></div>
+  {% include scripts.html %}
 </body>
 
 </html>
