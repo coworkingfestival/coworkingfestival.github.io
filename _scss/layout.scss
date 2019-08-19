@@ -1,11 +1,20 @@
-
 // layout
 .site-body {
   position: relative;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  overflow-x: hidden;
 }
+
+.site-body--menu-open {
+  overflow: hidden;
+  .site-main {
+    pointer-events: none;
+    display: none;
+  }
+}
+
 .site-main {
   flex-grow: 1;
   overflow: hidden;
@@ -16,6 +25,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   @include media-query($size-m) {
     padding: 8rem 2rem;
   }

@@ -1,0 +1,126 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  background-color: $color-cream;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  overflow: hidden;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  border-left: 10px solid $color-text;
+}
+
+.menu--peaking {
+  transform: rotate(-89deg);
+}
+
+.menu--active {
+  transform: rotate(0);
+}
+
+.menu-toggle {
+  position: absolute;
+  z-index: 20;
+  top: 2.5rem;
+  right: 0;
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  color: $color-text;
+  background-color: transparent;
+  border: 2px solid $color-text;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform-origin: 100% 100%;
+  text-align: center;
+  &:hover, &:focus {
+    transform: rotate(-10deg);
+    outline: none;
+  }
+  &:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 4rem;
+    right: calc(-4rem - 4px);
+    height: 4rem;
+    width: 4rem;
+    padding: .5rem;
+    color: $color-text;
+    background-color: transparent;
+    border: 2px solid $color-text;
+    content: 'X';
+    transform: rotate(-180deg);
+    text-align: center;
+  }
+}
+
+.menu-toggle--active {
+  transform: rotate(-180deg);
+  &:hover, &:active {
+    transform: rotate(-190deg);
+  }
+}
+
+.menu__inner {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  @include media-query($size-m) {
+    padding: 4rem;
+  }
+}
+
+.menu-link {
+  color: $color-text;
+  font-size: 2rem;
+  padding: 1rem;
+  &:after {
+    content: '→';
+    opacity: 0;
+    display: inline-block;
+  }
+  &:hover, &:focus {
+    &:after {
+      opacity: 1;
+      transform: translateX(1rem);
+      transition-property: transform, opacity;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-timing-function;
+    }
+  }
+  @include media-query($size-m) {
+    padding: 4;
+  }
+}
+
+.menu-link--home {
+  &:after {
+    content: '⇧';
+    transform: translateY(.5rem);
+  }
+  &:hover, &:focus {
+    &:after {
+      opacity: 1;
+      transform: translateY(-0.5rem);
+    }
+  }
+}
+
+.menu-link--mini {
+  font-size: .875rem;
+}
+
+.menu-inner__group {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
