@@ -4,10 +4,85 @@ title: Schedule
 ---
 
 <div class="container">
-  <div class="section section--64 mb7">
+  <div class="section section--64 mb6">
     <h1>Schedule</h1>
-    <p>
-      More details will be posted as we get closer to the event date.
+    <p class="text-huge">
+      Participate in workshops, meetups, exhibitions and learn from other professionals in the coworking community. Share knowledge around topics like technology, marketing, business operations, community building, and more: Meet new friends, potential business partners, and make meaningful connections.
     </p>
+    <div class="flex items-center flex-wrap justify-end">
+      <p class="pr4 tr">
+        Is your space or event missing here? Let us know and we’ll add it!
+      </p>
+      <p>
+        <a href="{% link contact.html %}" class="btn btn--border-with-shadow">
+          Contact Us
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Monday, September 9</h2>
+      {% for event in site.data.events %}
+        {% if event.weekday == "Monday" %}
+          {% include event.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Tuesday, September 10</h2>
+      {% for event in site.data.events %}
+        {% if event.weekday == "Tuesday" %}
+          {% include event.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Wednesday, September 11</h2>
+      {% for event in site.data.events %}
+        {% if event.weekday == "Wednesday" %}
+          {% include event.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Thursday, September 12</h2>
+      {% for event in site.data.events %}
+        {% if event.weekday == "Thursday" %}
+          {% include event.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="events-day">
+  <div class="container">
+    <div class="section section--64 mb5">
+      <h2>Friday, September 13</h2>
+      {% for event in site.data.events %}
+        {% if event.weekday == "Friday" %}
+          {% include event.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </div>
