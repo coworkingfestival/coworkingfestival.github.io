@@ -8,6 +8,7 @@
   color: $color-text;
   font-family: sofia-pro-condensed, sans-serif;
   &:hover, &:focus {
+    outline: none;
     color: $color-text;
     .logo__x {
       color: $color-pink;
