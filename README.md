@@ -13,12 +13,23 @@
 
 To run the site locally and view it in your browser:
 * Open Terminal.app (Mac).
-* Go to the directory of the project (e.g. `cd projects/coworkingfestival`)
+* Clone this repository into your projects folder: `git clone <URL>`
+* Go into the new directory: `cd coworkingfestival.github.io`
 * Start the site generator with `jekyll serve --live`.
 
 This will start a web server. Now you can view the site in your browser at http://127.0.0.1:4000.
 
 See how to work with files at https://jekyllrb.com/docs/pages/.
+
+### Adding a participating space 
+
+Each participating space has a `.md` file in the `/spaces` directory. To edit name, link, logo… of a space, edit the file.
+To add a new space, create a new file `<spacename>.md`.
+Keep in mind that filename, identifier, image filenames must always be lowercase and can not contain special characters, spaces or Umlaute.
+
+Each space should also have a logo (`logo-<spacename>.svg`) and a photo (`photo-<spacename>.jpg`) in the corresponding folders. 
+Logo dimensions: 500x310px
+Photo dimensions: 100x750px
 
 ### Editing Schedule
 
