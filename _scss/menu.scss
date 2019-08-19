@@ -124,6 +124,7 @@
 
 .menu-link--disabled {
   color: $color-text-50;
+  cursor: default;
   &:after {
     content: 'tba';
     font-size: .625em;
