@@ -65,7 +65,7 @@
 
 .menu-toggle--active {
   transform: rotate(-180deg);
-  &:hover, &:active {
+  &:hover, &:focus {
     transform: rotate(-190deg);
   }
 }
@@ -99,7 +99,13 @@
     }
   }
   @include media-query($size-m) {
-    padding: 4;
+    padding: 2rem;
+  }
+  @include media-query($size-xl) {
+    font-size: 2.5rem;
+  }
+  @include media-query($size-xxl) {
+    font-size: 3rem;
   }
 }
 
@@ -116,8 +122,53 @@
   }
 }
 
+.menu-link--disabled {
+  color: $color-text-50;
+  &:after {
+    content: 'tba';
+    font-size: .625em;
+    opacity: 1;
+    transform: translateY(-0.5rem);
+    padding-left: .5rem;
+  }
+  &:hover, &:focus {
+    color: $color-text-50;
+    &:after {
+      opacity: 1;
+      transform: translateY(-0.5rem);
+      animation: shake 0.52s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, -0.5rem, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+  }
+}
+
+
+
+@keyframes shake {
+ 10%, 90% {
+   transform: translate3d(-1px, -0.5rem, 0);
+ }
+
+ 20%, 80% {
+   transform: translate3d(2px, -0.5rem, 0);
+ }
+
+ 30%, 50%, 70% {
+   transform: translate3d(-4px, -0.5rem, 0);
+ }
+
+ 40%, 60% {
+   transform: translate3d(4px, -0.5rem, 0);
+ }
+}
+
 .menu-link--mini {
   font-size: .875rem;
+  @include media-query($size-xl) {
+    font-size: 1rem;
+  }
 }
 
 .menu-inner__group {
