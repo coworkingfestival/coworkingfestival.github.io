@@ -33,6 +33,7 @@ a {
   text-decoration: none;
   letter-spacing: .05em;
   &:hover, &:focus {
+    outline: none;
     color: $color-text;
     background-color: lighten($color-yellow, 20%);
   }

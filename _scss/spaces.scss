@@ -41,6 +41,7 @@
     margin-bottom: 0;
   }
   &:hover, &:focus {
+    outline: none;
     color: $color-text;
     cursor: pointer;
     .space__info {
