@@ -21,16 +21,18 @@ This will start a web server. Now you can view the site in your browser at http:
 
 See how to work with files at https://jekyllrb.com/docs/pages/.
 
-### Adding a participating space 
+### Adding a participating space
 
 Each participating space has a `.md` file in the `/spaces` directory. To edit name, link, logo… of a space, edit the file.
 To add a new space, create a new file `<spacename>.md`.
 Keep in mind that filename, identifier, image filenames must always be lowercase and can not contain special characters, spaces or Umlaute.
 
-Each space should also have a logo (`logo-<spacename>.svg`) and a photo (`photo-<spacename>.jpg`) in the corresponding folders. 
+Each space should also have a logo (`logo-<spacename>.svg`) and a photo (`photo-<spacename>.jpg`) in the corresponding folders.
+
 Logo dimensions: 500x310px
+
 Photo dimensions: 100x750px
 
-### Editing Schedule
+### Editing Schedule (not there yet)
 
 In order to edit the schedule, open the .csv file called e.g. `monday-events.csv` for the program day under `data` in a spreadsheet application and make the changes. Save the changes and commit them with `git commit -am 'schedule update' & git push`.
