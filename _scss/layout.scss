@@ -1,0 +1,121 @@
+
+// layout
+.site-body {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site-main {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.site-header {
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-query($size-m) {
+    padding: 8rem 2rem;
+  }
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  @include media-query($size-l) {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+}
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section--64 {
+  max-width: 64rem;
+}
+
+.section--120 {
+  max-width: 120rem;
+}
+
+.media-content {
+  --media-top-offset: 12rem;
+  @include media-query($size-s) {
+    --media-top-offset: 14rem;
+  }
+  @include media-query($size-m) {
+    --media-top-offset: 10rem;
+  }
+  @include media-query($size-l) {
+    --media-top-offset: 8rem;
+  }
+  margin-top: var(--media-top-offset);
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.media-content__media {
+  max-width: 110%;
+  top: calc(-1 * var(--media-top-offset));
+  right: -5rem;
+  position: absolute;
+  z-index: -3;
+  @include media-query($size-s) {
+    right: -10rem;
+    max-width: 90%;
+  }
+  @include media-query($size-l) {
+    right: -12rem;
+  }
+  @include media-query($size-xl) {
+    max-width: 100%;
+    right: -22rem;
+  }
+}
+
+.media-content__content {
+  @include media-query($size-s) {
+    width: 75%;
+  }
+  @include media-query($size-m) {
+    width: 66.6667%;
+  }
+}
+
+.parallax {
+  z-index: -10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  @include media-query($size-l) {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image:
+      url("../img/backgrounds/parallax-lavender.svg"),
+      url("../img/backgrounds/parallax-yellow.svg"),
+      url("../img/backgrounds/parallax-pink.svg");
+    background-size: 381px, 182px, 541px;
+    background-position: 122% 30rem, 5rem -9rem, 2rem 113%;
+  }
+  @include media-query($size-xl) {
+    background-position: 112% 30rem, 5rem -9rem, 2rem 113%;
+
+  }
+  @include media-query($size-xxl) {
+    background-position: 108% 30rem, 5rem -9rem, 2rem 113%;
+  }
+}

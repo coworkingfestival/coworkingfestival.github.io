@@ -44,11 +44,11 @@
   grid-column: 2/3;
   grid-row: 2/3;
   font-size: calc(2.5em / 2); // 80px
+  font-family: sofia-pro, sans-serif;
+  line-height: 1;
   @include media-query($size-m) {
     font-size: calc(2.5em / 4); // 40px
   }
-  font-family: sofia-pro, sans-serif;
-  line-height: 1;
 }
 
 .logo__location {
