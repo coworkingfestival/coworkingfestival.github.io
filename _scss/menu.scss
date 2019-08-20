@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 0;
   z-index: 15;
   overflow: hidden;
   transition-property: transform;
@@ -17,11 +17,9 @@
   border-left: 10px solid $color-text;
 }
 
-.menu--peaking {
-  transform: rotate(-89deg);
-}
-
 .menu--active {
+  display: flex;
+  height: 100vh;
   transform: rotate(0);
 }
 
