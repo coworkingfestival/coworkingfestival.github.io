@@ -1,7 +1,7 @@
 ---
 identifier: happy-pigeons
 name: "Happy Pigeons Coliving & Coworking"
-image: 
+image: "photo-happypigeons"
 logo: "logo-happy-pigeons.png"
 link: "http://www.happy-pigeons.com"
 address: |

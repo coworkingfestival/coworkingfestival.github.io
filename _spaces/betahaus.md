@@ -1,7 +1,7 @@
 ---
 identifier: betahaus
 name: "betahaus Neukölln & betahaus Kreuzberg"
-image: 
+image: "photo-betahaus"
 logo: "logo-betahaus.png"
 link: "http://www.betahaus.com"
 address: |
