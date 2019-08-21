@@ -31,7 +31,7 @@ Each space should also have a logo (`logo-<spacename>.svg`) and a photo (`photo-
 
 Logo dimensions: 500x310px
 
-Photo dimensions: 100x750px
+Photo dimensions: 1000x750px
 
 ### Editing Schedule (not there yet)
 

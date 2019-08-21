@@ -1,0 +1,9 @@
+.rotate-10 {
+  transform: rotate(-10deg);
+}
+
+.rotate-10--on-hover {
+  &:hover, &:focus {
+    transform: rotate(-10deg);
+  }
+}
