@@ -5,7 +5,7 @@ image: "photo-betahaus.jpg"
 logo: "logo-betahaus.png"
 link: "http://www.betahaus.com"
 address: |
-  Harzer Straße 39, Berlin 12059
+  Harzer Straße 39, 12059 Berlin 
   <br>
-  Rudi-Dutschke-Str 23, Berlin 10969
+  Rudi-Dutschke-Str. 23, 10969 Berlin
 ---
