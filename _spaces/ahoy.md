@@ -1,7 +1,7 @@
 ---
 identifier: ahoy
 name: "Ahoy! Berlin"
-image: 
+image: "photo-ahoy.jpg"
 logo: "logo-ahoy.png"
 link: "https://www.ahoyberlin.com/"
 address: |
