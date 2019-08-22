@@ -118,33 +118,3 @@
   @include media-query($size-l) {
   }
 }
-
-.rotate-10 {
-  transform: rotate(-10deg);
-}
-
-.rotate-10--on-hover {
-  &:hover, &:focus {
-    transform: rotate(-10deg);
-  }
-}
-
-.border-with-shadow {
-  border: 2px solid currentColor;
-  background-color: $color-white;
-  box-shadow: -1rem 1rem 0 currentColor;
-}
-
-.border-with-shadow--yellow {
-  border-color: $color-yellow;
-  &:before {
-    background-color: $color-yellow;
-  }
-}
-
-.border-with-shadow--coral {
-  border-color: $color-coral;
-  &:before {
-    background-color: $color-coral;
-  }
-}
