@@ -13,23 +13,33 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Coworking Festival 2019
-email: your-email@example.com
+title: Coworking Festival Berlin 2019 | 9. - 13. Sept.
+email: berlincoworking@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Discover the Future of Work: What will the workplace look like in five years? What about ten? Even more? Explore how today’s coworking spaces are leading the way forward in work, life, and everything in between.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.coworkingfestival.com/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: berlincoworking
 github_username: berlincoworking
 permalink: pretty
+lang: "en_US"
+twitter:
+  username: berlincoworking
+  card: summary
+social:
+  name: BerlinCoworking
+  links:
+    - https://www.facebook.com/berlincoworking/
+    - https://www.coworkingfestival.com/
+    - https://twitter.com/berlincoworking
+    - https://www.instagram.com/berlincoworking/
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Assets
 # We specify the directory for Jekyll so we can use @imports.

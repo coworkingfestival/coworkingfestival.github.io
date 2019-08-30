@@ -36,3 +36,15 @@ Photo dimensions: 1000x750px
 ### Editing Schedule (not there yet)
 
 In order to edit the schedule, open the .csv file called e.g. `monday-events.csv` for the program day under `data` in a spreadsheet application and make the changes. Save the changes and commit them with `git commit -am 'schedule update' & git push`.
+
+### Adding Meta information
+
+Each page can contain a section with the following meta information
+
+    ---
+    layout: default # layout to wrap page in
+    title: Schedule
+    description: "Some text describing the page put also in meta tags of the page header"
+    lang: "en_US" # Language the page is in default is 'en_US' and could be 'de_DE'
+    image: http://image.path # URL to an image associated with page
+    ---
