@@ -1,11 +1,9 @@
 ---
 identifier: st-oberholz
-name: "St. Oberholz Rosenthaler  & St. Oberholz Zehdenicker"
+name: "St. Oberholz B-Part"
 image:
 logo: "logo-st-oberholz.svg"
 link: "https://sanktoberholz.de/"
 address: |
-  Rosenthaler Straße 72, 10119 Berlin
-  <br>
-  Zehdenicker Straße 1, 10119 Berlin
+  Luckenwalder Straße 6b, 10963 Berlin
 ---
