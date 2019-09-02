@@ -13,24 +13,23 @@
     </div>
   </h4>
   <h3 class="event__title">
-    PLACEHOLDER TITLE
+    {{ event.event_title_eng }}
   </h3>
   <p class="event__description">
     {{ event.event_desc_eng | newline_to_br }}
   </p>
 
-  {% if event.url %}
-    <a href="{{ event.url }}" target="_blank">
-  {% elsif event.fb_url %}
-    <a href="{{ event.fb_url }}" target="_blank">
-  {% else %}
-    <a href="#">
-  {% endif %}
-    {% if event.paid == 'Yes' %}
-      (Paid)
+  {% if event.url || event.fb_url %}
+    {% if event.url %}
+      <a href="{{ event.url }}" target="_blank" class="ttu">
+    {% elsif event.fb_url %}
+      <a href="{{ event.fb_url }}" target="_blank" class="ttu">
     {% endif %}
-
-    MORE INFO
-  </a>
+       ⇧ Event Website
+       {% if event.paid == 'Yes' %}
+         (Paid Event)
+       {% endif %}
+    </a>
+  {% endif %}
 
 </div>
