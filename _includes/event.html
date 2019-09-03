@@ -1,3 +1,11 @@
+{% assign current_space = event.space_id %}
+
+{% for space in site.spaces %}
+  {% if space.identifier == current_space %}
+    {% assign website_link = space.link %}
+  {% endif %}
+{% endfor %}
+
 <div class="event border-with-shadow pa4 pa5-l">
   <h4 class="event__details">
     <div class="event__time">
@@ -5,7 +13,7 @@
       {{event.start_time | date: "%I:%M%P"}}&nbsp;-&nbsp;{{event.end_time | date: "%I:%M%P"}}
     </div>
     <div class="event__location">
-      <div>{{event.space}}</div>
+      <a href="{{ website_link }}">{{event.space}}</a>
       <div class="pin-wrapper ml3">
         <div class='pin'></div>
         <div class='pulse'></div>
@@ -19,17 +27,37 @@
     {{ event.event_desc_eng | newline_to_br }}
   </p>
 
-  {% if event.url || event.fb_url %}
-    {% if event.url %}
-      <a href="{{ event.url }}" target="_blank" class="ttu">
-    {% elsif event.fb_url %}
-      <a href="{{ event.fb_url }}" target="_blank" class="ttu">
-    {% endif %}
-       ⇧ Event Website
-       {% if event.paid == 'Yes' %}
-         (Paid Event)
-       {% endif %}
-    </a>
-  {% endif %}
+  <div class="event__meta">
+    <div class="mr3">
+      Event Language:
+      <span class="ttc">
+        {% if event.language %}
+          {{ event.language }}
+        {% else %}
+          n/a
+        {% endif %}
+      </span>
+    </div>
+
+    <div>
+      {% if event.url || event.fb_url %}
+        {% if event.url %}
+          <a href="{{ event.url }}" target="_blank" class="mr3">
+        {% elsif event.fb_url %}
+          <a href="{{ event.fb_url }}" target="_blank"  class="mr3">
+        {% endif %}
+           Facebook Event
+           {% if event.paid == 'Yes' %}
+             (Paid Event)
+           {% endif %}
+        </a>
+      {% endif %}
+
+      <a href="{{ website_link }}" class="" target="_blank">
+        Space Homepage
+      </a>
+    </div>
+
+  </div>
 
 </div>

@@ -25,6 +25,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font-size: 0.8rem;
+  @include media-query($size-s) {
+    font-size: 1.5rem;
+  }
+}
+
+.event__description {
+  font-size: 1rem;
+  @include media-query($size-s) {
+    font-size: 1.5rem;
+  }
 }
 
 .event__weekday {
@@ -42,4 +53,12 @@
   margin-left: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.event__meta {
+  font-size: .8rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: $color-text-75;
 }
