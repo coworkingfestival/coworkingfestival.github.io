@@ -6,9 +6,6 @@
   &:nth-child(odd) {
     background-color: $color-lavender;
   }
-  &:last-child {
-    border-bottom: 3px solid $color-text;
-  }
   .section {
     display: flex;
     flex-direction: column;

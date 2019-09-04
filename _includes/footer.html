@@ -1,5 +1,37 @@
-<footer class="site-footer">
-  <span class="pr3">&copy; 2019 Coworking Festival Berlin</span>
-  <a href="{% link contact.html %}" target="_blank" class="link--footer">Contact</a>
-  <a href="{% link impressum.html %}" class="link--footer">Impressum</a>
+<footer class="site-footer flex flex-wrap">
+  <div class="footer__supporters">
+    <div class="flex items-center">
+      <a href="https://www.cobot.me/" target="_blank" class="footer__sponsor footer__sponsor--cobot mr5" alt="Cobot">
+        <img src="{{ site.baseurl }}/img/logos/logo-cobot.svg" alt="Cobot Logo" />
+      </a>
+      <a href="https://onecoworking.com" target="_blank" class="footer__sponsor footer__sponsor--oneco" alt="One Coworking">
+        <img src="{{ site.baseurl }}/img/logos/logo-oneco.png" alt="One Coworking Logo" />
+      </a>
+    </div>
+    <h4>Thanks to our supporters</h4>
+    <p class="mb0 text-medium">
+      The festival is sponsored by <a href="https://www.cobot.me/" target="_blank">Cobot</a>, the leading provider of coworking software worldwide, and by <a href="https://onecoworking.com" target="_blank">One Coworking</a>, an app connecting coworkers to coworking spaces around the globe. Festival attendees can find the list of spaces, events, and directions throughout the week using the One Coworking app.
+    </p>
+  </div>
+  <div class="footer__meta">
+    <div class="footer__nav">
+      <a href="/" class="link--footer">Home</a>
+      <a href="{% link schedule.html %}" class="link--footer">Schedule</a>
+      <a href="{% link tours.html %}" class="link--footer">Tours</a>
+      <a href="{% link faq.html %}" class="link--footer">FAQ</a>
+      <a href="{% link contact.html %}" class="link--footer pr0">Contact</a>
+      <!--
+      <div class="menu-inner__group">
+        <a href="https://twitter.com/berlincoworking" target="_blank" class="menu-link menu-link--mini">Twitter</a>
+        <a href="https://www.facebook.com/berlincoworking/" target="_blank" class="menu-link menu-link--mini">Facebook</a>
+        <a href="https://www.instagram.com/berlincoworking/" target="_blank" class="menu-link menu-link--mini">Instagram</a>
+      </div>
+     -->
+    </div>
+    <div class="footer__credit text-medium">
+      <span class="pr2">&copy; 2019 Coworking Festival Berlin</span>
+      &bull;
+      <a href="{% link impressum.html %}" class="link--footer pl2 pr0">Impressum</a>
+    </div>
+  </div>
 </footer>
