@@ -20,44 +20,50 @@
       </div>
     </div>
   </h4>
-  <h3 class="event__title">
-    {{ event.event_title_eng }}
-  </h3>
-  <p class="event__description">
-    {{ event.event_desc_eng | newline_to_br }}
-  </p>
+  <div class="flex flex-wrap">
+    <h3 class="event__title">
+      {{ event.event_title_eng }}
+    </h3>
+    <button type="button" name="button" class="event-toggle">Show Details</button>
+  </div>
 
-  <div class="event__meta">
-    <div class="mr3">
-      Event Language:
-      <span class="ttc">
-        {% if event.language %}
-          {{ event.language }}
-        {% else %}
-          n/a
-        {% endif %}
-      </span>
-    </div>
+  <div class="event__further-info event__further-info--is-hidden">
+    <p class="event__description">
+      {{ event.event_desc_eng | newline_to_br }}
+    </p>
 
-    <div>
-      {% if event.url || event.fb_url %}
-        {% if event.url %}
-          <a href="{{ event.url }}" target="_blank" class="mr3">
-        {% elsif event.fb_url %}
-          <a href="{{ event.fb_url }}" target="_blank"  class="mr3">
+    <div class="event__meta">
+      <div class="mr3">
+        Event Language:
+        <span class="ttc">
+          {% if event.language %}
+            {{ event.language }}
+          {% else %}
+            n/a
+          {% endif %}
+        </span>
+      </div>
+
+      <div>
+        {% if event.url || event.fb_url %}
+          {% if event.url %}
+            <a href="{{ event.url }}" target="_blank" class="mr3">
+          {% elsif event.fb_url %}
+            <a href="{{ event.fb_url }}" target="_blank"  class="mr3">
+          {% endif %}
+             Event Site
+             {% if event.paid == 'Yes' %}
+               (Paid Event)
+             {% endif %}
+          </a>
         {% endif %}
-           Facebook Event
-           {% if event.paid == 'Yes' %}
-             (Paid Event)
-           {% endif %}
+
+        <a href="{{ website_link }}" class="" target="_blank">
+          Space Homepage
         </a>
-      {% endif %}
+      </div>
 
-      <a href="{{ website_link }}" class="" target="_blank">
-        Space Homepage
-      </a>
     </div>
-
   </div>
 
 </div>

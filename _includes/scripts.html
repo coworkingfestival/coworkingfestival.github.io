@@ -46,3 +46,14 @@
     button.classList.toggle("menu-toggle--active").blur();
   });
 </script>
+
+<script>
+  const events = document.querySelectorAll(".event");
+  events.forEach(function(event) {
+    var eventButton = event.querySelector(".event-toggle");
+    var eventDetails = event.querySelector(".event__further-info");
+    eventButton.addEventListener("click", function(){
+      eventDetails.classList.toggle("event__further-info--is-hidden");
+    });
+  });
+</script>
