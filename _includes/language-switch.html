@@ -17,8 +17,10 @@
   {% assign urlEn = currentUrl | prepend: "/en" %}
 {% endif %}
 
-<div class="language-switch">
-  <a href="{{ urlEn }}" class="lang-link {% if page.url == urlEn %}lang-link--active{% endif %}">EN</a>
-  /
-  <a href="{{ urlDe }}" class="lang-link {% if page.url == urlDe %}lang-link--active{% endif %}">DE</a>
-</div>
+{% unless page.germanonly %}
+  <div class="language-switch">
+    <a href="{{ urlEn }}" class="lang-link {% if page.url == urlEn %}lang-link--active{% endif %}">EN</a>
+    /
+    <a href="{{ urlDe }}" class="lang-link {% if page.url == urlDe %}lang-link--active{% endif %}">DE</a>
+  </div>
+{% endunless %}

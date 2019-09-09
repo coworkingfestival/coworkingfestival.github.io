@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Datenschutz
+germanonly: true
 ---
 
 <div>
