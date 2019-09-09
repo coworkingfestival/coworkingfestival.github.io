@@ -10,7 +10,7 @@
   <h4 class="event__details">
     <div class="event__time">
       <span class="event__weekday">{{ event.weekday_de }},</span>
-      {{event.start_time | date: "%I:%M%P"}}&nbsp;-&nbsp;{{event.end_time | date: "%I:%M%P"}}
+      {{event.start_time | date: "%R"}}&nbsp;-&nbsp;{{event.end_time | date: "%R"}} Uhr
     </div>
     <div class="event__location">
       <a href="{{ website_link }}">{{event.space}}</a>
