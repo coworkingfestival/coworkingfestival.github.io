@@ -20,7 +20,7 @@ Thilo Utke
 
 Email: berlincoworking@gmail.com
 
-<a href="{% link impressum.html %}">
+<a href="/de/impressum">
   Impressum
 </a>
 

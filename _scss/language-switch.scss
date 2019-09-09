@@ -1,0 +1,24 @@
+.language-switch {
+  position: fixed;
+  z-index: 20;
+  top: 6rem;
+  right: 0;
+  display: flex;
+  align-items: baseline;
+  font-size: .75rem;
+  color: $color-text-50;
+}
+
+.lang-link {
+  display: block;
+  color: $color-text-50;
+  padding: .5rem;
+  font-size: 1.25rem;
+}
+
+.lang-link--active {
+  pointer-events: none;
+  color: $color-text;
+  font-weight: bold;
+  font-size: .75rem;
+}

@@ -1,0 +1,24 @@
+{% if page.url contains '/de' %}
+  {% assign currentUrl = page.url | remove: "/de" %}
+{% elsif page.url contains '/en' %}
+  {% assign currentUrl = page.url | remove: "/en" %}
+{% else %}
+  {% assign currentUrl = page.url | remove: "/" %}
+{% endif %}
+
+{% if page.url == '/' %}
+  {% assign urlDe = "/index-de" %}
+  {% assign urlEn = "/" %}
+{% elsif page.url == "/index-de/" %}
+  {% assign urlDe = page.url %}
+  {% assign urlEn = "/" %}
+{% else %}
+  {% assign urlDe = currentUrl | prepend: "/de" %}
+  {% assign urlEn = currentUrl | prepend: "/en" %}
+{% endif %}
+
+<div class="language-switch">
+  <a href="{{ urlEn }}" class="lang-link {% if page.url == urlEn %}lang-link--active{% endif %}">EN</a>
+  /
+  <a href="{{ urlDe }}" class="lang-link {% if page.url == urlDe %}lang-link--active{% endif %}">DE</a>
+</div>
