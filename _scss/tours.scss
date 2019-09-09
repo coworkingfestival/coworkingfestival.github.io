@@ -16,3 +16,17 @@
     float: right;
   }
 }
+
+.tour {
+
+}
+
+.tour__list {
+  list-style: none;
+  padding-left: 0;
+  span {
+    display: inline-block;
+    font-weight: bold;
+    min-width: 8rem;
+  }
+}
