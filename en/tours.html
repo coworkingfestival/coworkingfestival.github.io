@@ -1,19 +1,17 @@
 ---
 layout: default
 title: Tours
+description: "Use our custom map to explore the participating spaces in Berlin – or join the free guided tour."
 ---
 
 <div class="container">
   <div class="section section--64 mb6">
-    <h1>Tours</h1>
+    <h1>{{page.title}}</h1>
     <div class="tours-header">
       <p class="tours-header-copy text-huge measure-narrow">
-        Use our custom map to explore the participating spaces in Berlin – or join the free guided tour.
+        {{page.description}}
       </p>
-      <iframe
-        src="https://www.google.com/maps/d/u/0/embed?mid=1UlGiFbSsQl5kXMgshlO08SH_dHVBGXUD"
-        width="640" height="480"
-        class="tours-header-map border-with-shadow"></iframe>
+      <iframe class="tours-header-map border-with-shadow" height="480" src="https://www.google.com/maps/d/u/0/embed?mid=1UlGiFbSsQl5kXMgshlO08SH_dHVBGXUD" width="640"></iframe>
     </div>
   </div>
 </div>
@@ -27,7 +25,8 @@ title: Tours
       </p>
       <p>
         Discover the diversity of the Berlin coworking scene in one morning – during our free guided tour of selected spaces in Berlin.
-        Start & meeting point: <a href="https://kiez-buero.de/" target="_blank">Kiez Büro Coworking</a>.
+                Start & meeting point:
+        <a href="https://kiez-buero.de/" target="_blank">Kiez Büro Coworking</a>.
       </p>
       <ul class="tour__list">
         <li>
@@ -52,7 +51,7 @@ title: Tours
         </li>
       </ul>
       <p class="tr mb0">
-        <a href="https://www.facebook.com/events/514732989352981/" target="_blank" class="btn btn--border-with-shadow">
+        <a class="btn btn--border-with-shadow" href="https://www.facebook.com/events/514732989352981/" target="_blank">
           Register on Facebook
         </a>
       </p>
