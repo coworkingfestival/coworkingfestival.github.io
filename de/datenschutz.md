@@ -19,7 +19,7 @@ Adalbertstraße 8
 Vertreten durch:
 Thilo Utke
 
-Email: berlincoworking@gmail.com
+Email: {{site.email}}
 
 <a href="/de/impressum">
   Impressum
