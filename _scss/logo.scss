@@ -32,8 +32,9 @@
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
   img {
-    width: 100%;
+    max-width: 100%;
     display: block;
+    min-width: 1.875ex;
   }
 }
 
